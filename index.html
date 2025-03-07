@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minigames</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Minigames</h1>
+    </header>
+
+    <div class="game-grid">
+        <!-- Juegos originales -->
+        <div class="game-card">
+            <img src="1.jpg" alt="Bullet Force Multiplayer">
+            <h3>Bullet Force Multiplayer</h3>
+            <button class="play-button" onclick="openGameModal('Bullet Force Multiplayer', 'game1')">
+                <i class="fas fa-play"></i> Jugar
+            </button>
+        </div>
+        <div class="game-card">
+            <img src="2.jpg" alt="Krunker.io">
+            <h3>Krunker.io</h3>
+            <button class="play-button" onclick="openGameModal('Krunker.io', 'game2')">
+                <i class="fas fa-play"></i> Jugar
+            </button>
+        </div>
+        <div class="game-card">
+            <img src="3.jpg" alt="Rally Point 3">
+            <h3>Rally Point 3</h3>
+            <button class="play-button" onclick="openGameModal('Rally Point 3', 'game3')">
+                <i class="fas fa-play"></i> Jugar
+            </button>
+        </div>
+        <div class="game-card">
+            <img src="4.jpg" alt="Mad Truck Challenge">
+            <h3>Mad Truck Challenge</h3>
+            <button class="play-button" onclick="openGameModal('Mad Truck Challenge', 'game4')">
+                <i class="fas fa-play"></i> Jugar
+            </button>
+        </div>
+        <div class="game-card">
+            <img src="5.png" alt="Drift Hunters">
+            <h3>Drift Hunters</h3>
+            <button class="play-button" onclick="openGameModal('Drift Hunters', 'game5')">
+                <i class="fas fa-play"></i> Jugar
+            </button>
+        </div>
+        <div class="game-card">
+            <img src="6.png" alt="Super Bike The Champion">
+            <h3>Super Bike The Champion</h3>
+            <button class="play-button" onclick="openGameModal('Super Bike The Champion', 'game6')">
+                <i class="fas fa-play"></i> Jugar
+            </button>
+        </div>
+        <div class="game-card">
+            <img src="7.jpg" alt="Penalty Shooters 2">
+            <h3>Penalty Shooters 2</h3>
+            <button class="play-button" onclick="openGameModal('Penalty Shooters 2', 'game7')">
+                <i class="fas fa-play"></i> Jugar
+            </button>
+        </div>
+        <div class="game-card">
+            <img src="8.jpg" alt="Table Tennis World Tour">
+            <h3>Table Tennis World Tour</h3>
+            <button class="play-button" onclick="openGameModal('Table Tennis World Tour', 'game8')">
+                <i class="fas fa-play"></i> Jugar
+            </button>
+        </div>
+        <div class="game-card">
+            <img src="9.png" alt="8 Ball Billiards Classic">
+            <h3>8 Ball Billiards Classic</h3>
+            <button class="play-button" onclick="openGameModal('8 Ball Billiards Classic', 'game9')">
+                <i class="fas fa-play"></i> Jugar
+            </button>
+        </div>
+        <div class="game-card">
+            <img src="10.jpg" alt="Paper.io 2">
+            <h3>Paper.io 2</h3>
+            <button class="play-button" onclick="openGameModal('Paper.io 2', 'game10')">
+                <i class="fas fa-play"></i> Jugar
+            </button>
+        </div>
+        <div class="game-card">
+            <img src="11.png" alt="2048">
+            <h3>2048</h3>
+            <button class="play-button" onclick="openGameModal('2048', 'game11')">
+                <i class="fas fa-play"></i> Jugar
+            </button>
+        </div>
+        <div class="game-card">
+            <img src="12.jpg" alt="Subway Clash 3D">
+            <h3>Subway Clash 3D</h3>
+            <button class="play-button" onclick="openGameModal('Subway Clash 3D', 'game12')">
+                <i class="fas fa-play"></i> Jugar
+            </button>
+        </div>
+        <div class="game-card">
+            <img src="15.jpg" alt="Smash Karts">
+            <h3>Smash Karts</h3>
+            <button class="play-button" onclick="openGameModal('Smash Karts', 'game15')">
+                <i class="fas fa-play"></i> Jugar
+            </button>
+        </div>
+        <div class="game-card">
+            <img src="16.jpg" alt="Worms Zone">
+            <h3>Worms Zone</h3>
+            <button class="play-button" onclick="openGameModal('Worms Zone', 'game16')">
+                <i class="fas fa-play"></i> Jugar
+            </button>
+        </div>
+        <div class="game-card">
+            <img src="17.png" alt="Super Star Car">
+            <h3>Super Star Car</h3>
+            <button class="play-button" onclick="openGameModal('Super Star Car', 'game17')">
+                <i class="fas fa-play"></i> Jugar
+            </button>
+        </div>
+        <div class="game-card">
+            <img src="18.jpg" alt="Tank Trouble">
+            <h3>Tank Trouble</h3>
+            <button class="play-button" onclick="openGameModal('Tank Trouble', 'game18')">
+                <i class="fas fa-play"></i> Jugar
+            </button>
+        </div>
+        <div class="game-card">
+            <img src="19.jpg" alt="Gun Mayhem 2">
+            <h3>Gun Mayhem 2</h3>
+            <button class="play-button" onclick="openGameModal('Gun Mayhem 2', 'game19')">
+                <i class="fas fa-play"></i> Jugar
+            </button>
+        </div>
+        <div class="game-card">
+            <img src="20.jpg" alt="Getaway Shootout">
+            <h3>Getaway Shootout</h3>
+            <button class="play-button" onclick="openGameModal('Getaway Shootout', 'game20')">
+                <i class="fas fa-play"></i> Jugar
+            </button>
+        </div>
+        <div class="game-card">
+            <img src="21.jpg" alt="City Car Driving Simulator">
+            <h3>City Car Driving Simulator</h3>
+            <button class="play-button" onclick="openGameModal('City Car Driving Simulator', 'game21')">
+                <i class="fas fa-play"></i> Jugar
+            </button>
+        </div>
+        <!-- Juegos nuevos -->
+        <div class="game-card">
+            <img src="22.jpg" alt="Rooftop Snipers">
+            <h3>Rooftop Snipers</h3>
+            <button class="play-button" onclick="openGameModal('Rooftop Snipers', 'game22')">
+                <i class="fas fa-play"></i> Jugar
+            </button>
+        </div>
+        <div class="game-card">
+            <img src="23.jpg" alt="Basket Random">
+            <h3>Basket Random</h3>
+            <button class="play-button" onclick="openGameModal('Basket Random', 'game23')">
+                <i class="fas fa-play"></i> Jugar
+            </button>
+        </div>
+        <div class="game-card">
+            <img src="24.jpg" alt="Slither.io">
+            <h3>Slither.io</h3>
+            <button class="play-button" onclick="openGameModal('Slither.io', 'game24')">
+                <i class="fas fa-play"></i> Jugar
+            </button>
+        </div>
+        <div class="game-card">
+            <img src="25.png" alt="Diep.io">
+            <h3>Diep.io</h3>
+            <button class="play-button" onclick="openGameModal('Diep.io', 'game25')">
+                <i class="fas fa-play"></i> Jugar
+            </button>
+        </div>
+        <div class="game-card">
+            <img src="26.jpeg" alt="Happy Wheels">
+            <h3>Happy Wheels</h3>
+            <button class="play-button" onclick="openGameModal('Happy Wheels', 'game26')">
+                <i class="fas fa-play"></i> Jugar
+            </button>
+        </div>
+        <div class="game-card">
+            <img src="27.jpg" alt="Skribbl.io">
+            <h3>Skribbl.io</h3>
+            <button class="play-button" onclick="openGameModal('Skribbl.io', 'game27')">
+                <i class="fas fa-play"></i> Jugar
+            </button>
+        </div>
+        <div class="game-card">
+            <img src="28.jpg" alt="Subway Surfers">
+            <h3>Subway Surfers</h3>
+            <button class="play-button" onclick="openGameModal('Subway Surfers', 'game28')">
+                <i class="fas fa-play"></i> Jugar
+            </button>
+        </div>
+    </div>
+
+    <div class="game-modal" id="gameModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalGameTitle">Título del Juego</h2>
+                <button class="close-modal" onclick="closeGameModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <iframe id="gameIframe" class="game-iframe" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
