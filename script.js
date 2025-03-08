@@ -56,7 +56,6 @@ document.getElementById('gameModal').addEventListener('click', (event) => {
     }
 });
 
-// Filtro de categorías
 document.querySelectorAll('.filter-btn').forEach(button => {
     button.addEventListener('click', () => {
         const category = button.getAttribute('data-category');
@@ -76,7 +75,6 @@ document.querySelectorAll('.filter-btn').forEach(button => {
     });
 });
 
-// Menú hamburguesa
 document.querySelector('.menu-toggle').addEventListener('click', () => {
     const menu = document.querySelector('.category-filter');
     menu.classList.toggle('active');
