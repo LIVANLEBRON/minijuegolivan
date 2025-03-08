@@ -10,14 +10,6 @@ body {
     color: #fff;
     padding: 2rem;
     min-height: 100vh;
-    animation: gradientBG 15s ease infinite;
-    background-size: 200% 200%;
-}
-
-@keyframes gradientBG {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
 }
 
 header {
@@ -33,7 +25,11 @@ header h1 {
     font-size: 2.8rem;
     text-transform: uppercase;
     letter-spacing: 3px;
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
 }
 
 .game-grid {
@@ -50,13 +46,6 @@ header h1 {
     text-align: center;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
     border: 1px solid rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(5px);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.game-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
 }
 
 .game-card img {
@@ -66,10 +55,14 @@ header h1 {
 }
 
 .game-card h3 {
-    color: #fff;
     font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+}
+
+.game-card p {
+    font-size: 1rem;
+    color: #ddd;
     margin-bottom: 1rem;
-    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
 }
 
 .play-button {
@@ -81,20 +74,10 @@ header h1 {
     cursor: pointer;
     font-size: 1.1rem;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    transition: all 0.3s ease;
 }
 
 .play-button:hover {
     background: linear-gradient(90deg, #b388ff, #6200ee);
-    transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
-    animation: pulse 1.5s infinite;
-}
-
-@keyframes pulse {
-    0% { transform: translateY(-3px) scale(1); }
-    50% { transform: translateY(-3px) scale(1.03); }
-    100% { transform: translateY(-3px) scale(1); }
 }
 
 .play-button i {
@@ -120,7 +103,6 @@ header h1 {
     height: 90vh;
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
 }
 
 .modal-header {
@@ -142,7 +124,6 @@ header h1 {
     color: white;
     font-size: 1.8rem;
     cursor: pointer;
-    transition: color 0.3s ease;
 }
 
 .close-modal:hover {
@@ -154,4 +135,32 @@ header h1 {
     height: calc(90vh - 60px);
     border: none;
     background-color: #000;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+footer a {
+    color: #b388ff;
+    text-decoration: none;
+    margin: 0 0.5rem;
+}
+
+footer a:hover {
+    color: #6200ee;
+}
+
+@media (max-width: 768px) {
+    .game-grid {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    }
+    header h1 {
+        font-size: 2rem;
+    }
+    header p {
+        font-size: 1rem;
+    }
 }

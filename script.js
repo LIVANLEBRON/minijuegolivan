@@ -32,7 +32,7 @@ function openGameModal(title, gameId) {
     const gameTitle = document.getElementById('modalGameTitle');
     const gameIframe = document.getElementById('gameIframe');
     gameTitle.textContent = title;
-    gameIframe.src = games[gameId];
+    gameIframe.src = games[gameId] || '';
     modal.style.display = 'flex';
 }
 
@@ -42,3 +42,17 @@ function closeGameModal() {
     modal.style.display = 'none';
     gameIframe.src = '';
 }
+
+// Cierra el modal al hacer clic fuera
+document.getElementById('gameModal').addEventListener('click', function(event) {
+    if (event.target === this) {
+        closeGameModal();
+    }
+});
+
+// Cierra con tecla Escape
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+        closeGameModal();
+    }
+});

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reseñas - MinijuegoLivan</title>
+    <meta name="description" content="Reseñas de los mejores juegos gratis en MinijuegoLivan.org">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .review-section {
+            background: var(--background-card);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: var(--card-shadow);
+            transition: transform 0.3s ease;
+        }
+        .review-section:hover {
+            transform: translateY(-5px);
+        }
+        .rating {
+            display: inline-block;
+            margin-top: 10px;
+            color: gold;
+        }
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: var(--accent-color);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            font-size: 20px;
+            cursor: pointer;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+        }
+        .back-to-top:hover {
+            background: var(--primary-color);
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Reseñas de Juegos</h1>
+        <p>Acá te dejo mis opiniones sobre algunos de los juegos en MinijuegoLivan.org. ¡Probá estos y contame qué pensás!</p>
+    </header>
+
+    <div class="container" style="padding: 0 20px; max-width: 1200px; margin: 0 auto;">
+        <section id="game28" class="review-section">
+            <h2>Subway Surfers</h2>
+            <p>Un clásico eterno. Corridas sin fin con gráficos vivos y controles simples. Ideal para pasar el rato.</p>
+            <div class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <span><strong>4/5</strong></span>
+            </div>
+        </section>
+        
+        <section id="game5" class="review-section">
+            <h2>Drift Hunters</h2>
+            <p>Para los fanáticos de los autos, este juego de drift es zarpado. Gráficos buenos y sensación realista. La física del auto responde muy bien a los controles, y la variedad de autos para desbloquear te mantiene enganchado por horas.</p>
+            <div class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span><strong>4.5/5</strong></span>
+            </div>
+        </section>
+        
+        <section id="game26" class="review-section">
+            <h2>Happy Wheels</h2>
+            <p>Caos y risas aseguradas con trampas locas. No apto para sensibles. Los controles pueden ser un poco difíciles al principio, pero una vez que te acostumbrás, es muy divertido intentar superar los niveles creados por la comunidad.</p>
+            <div class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <span><strong>4/5</strong></span>
+            </div>
+        </section>
+        
+        <section id="game24" class="review-section">
+            <h2>Slither.io</h2>
+            <p>Simple pero te engancha. Crecer tu serpiente sin chocar es un desafío puro. La mecánica es fácil de entender pero difícil de dominar, especialmente cuando el servidor está lleno de jugadores experimentados.</p>
+            <div class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <span><strong>4/5</strong></span>
+            </div>
+        </section>
+        
+        <section id="game2" class="review-section">
+            <h2>Krunker.io</h2>
+            <p>Shooter rápido y directo, perfecto para partidas cortas online. Los gráficos son simples pero funcionales, y el sistema de clases te permite encontrar un estilo de juego que se adapte a vos. Recomendado para fans de los FPS que buscan algo rápido y sin complicaciones.</p>
+            <div class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <span><strong>4/5</strong></span>
+            </div>
+        </section>
+    </div>
+
+    <button class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <footer>
+        <p>© 2025 MinijuegoLivan.org | <a href="privacy.html">Política de Privacidad</a> | <a href="terms.html">Términos de Uso</a> | <a href="index.html">Volver a Juegos</a></p>
+    </footer>
+
+    <script>
+        // Scroll to specific game review if hash is present in URL
+        document.addEventListener('DOMContentLoaded', function() {
+            if(window.location.hash) {
+                const gameSection = document.querySelector(window.location.hash);
+                if(gameSection) {
+                    gameSection.scrollIntoView({behavior: 'smooth'});
+                    gameSection.classList.add('highlight');
+                    setTimeout(() => {
+                        gameSection.classList.remove('highlight');
+                    }, 2000);
+                }
+            }
+        });
+    </script>
+</body>
+</html>
