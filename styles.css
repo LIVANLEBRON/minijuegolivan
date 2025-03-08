@@ -8,17 +8,17 @@
 body {
     background: linear-gradient(45deg, #0f2027, #203a43, #2c5364);
     color: #fff;
-    padding: 2rem;
+    padding: 1rem; /* Reducido para móvil */
     min-height: 100vh;
 }
 
 header {
     background: linear-gradient(90deg, #6200ee, #b388ff);
-    padding: 1.5rem;
+    padding: 1rem; /* Reducido para móvil */
     text-align: center;
     border-radius: 15px;
     box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem; /* Ajustado */
 }
 
 header h1 {
@@ -35,14 +35,14 @@ header p {
 .game-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
-    gap: 25px;
-    padding: 1rem;
+    gap: 20px; /* Reducido para móvil */
+    padding: 0.5rem; /* Ajustado */
 }
 
 .game-card {
     background: rgba(255, 255, 255, 0.1);
     border-radius: 15px;
-    padding: 1.5rem;
+    padding: 1rem; /* Reducido para móvil */
     text-align: center;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
     border: 1px solid rgba(255, 255, 255, 0.2);
@@ -51,7 +51,7 @@ header p {
 .game-card img {
     width: 100%;
     border-radius: 10px;
-    margin-bottom: 1rem;
+    margin-bottom: 0.8rem; /* Ajustado */
 }
 
 .game-card h3 {
@@ -60,19 +60,19 @@ header p {
 }
 
 .game-card p {
-    font-size: 1rem;
+    font-size: 0.9rem; /* Reducido para móvil */
     color: #ddd;
-    margin-bottom: 1rem;
+    margin-bottom: 0.8rem; /* Ajustado */
 }
 
 .play-button {
     background: linear-gradient(90deg, #6200ee, #b388ff);
     color: white;
     border: none;
-    padding: 0.8rem 1.8rem;
+    padding: 0.6rem 1.5rem; /* Reducido para móvil */
     border-radius: 30px;
     cursor: pointer;
-    font-size: 1.1rem;
+    font-size: 1rem; /* Ajustado */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
@@ -98,7 +98,7 @@ header p {
 
 .modal-content {
     background-color: #fff;
-    width: 90%;
+    width: 95%; /* Más ancho en móvil */
     max-width: 900px;
     height: 90vh;
     border-radius: 15px;
@@ -108,21 +108,21 @@ header p {
 .modal-header {
     background: linear-gradient(90deg, #6200ee, #b388ff);
     color: white;
-    padding: 1.2rem;
+    padding: 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .modal-header h2 {
-    font-size: 1.8rem;
+    font-size: 1.6rem; /* Reducido para móvil */
 }
 
 .close-modal {
     background: none;
     border: none;
     color: white;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     cursor: pointer;
 }
 
@@ -132,7 +132,7 @@ header p {
 
 .game-iframe {
     width: 100%;
-    height: calc(90vh - 60px);
+    height: calc(90vh - 50px); /* Ajustado para móvil */
     border: none;
     background-color: #000;
 }
@@ -140,7 +140,11 @@ header p {
 footer {
     text-align: center;
     padding: 1rem;
-    margin-top: 2rem;
+    margin-top: 1.5rem; /* Ajustado */
+}
+
+footer p {
+    margin-bottom: 0.5rem;
 }
 
 footer a {
@@ -153,14 +157,58 @@ footer a:hover {
     color: #6200ee;
 }
 
+.share-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px; /* Ajustado para móvil */
+}
+
+.share-btn {
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 8px;
+    border-radius: 50%;
+    text-decoration: none;
+}
+
+.share-btn.whatsapp { background-color: #25D366; }
+.share-btn.facebook { background-color: #3b5998; }
+.share-btn.twitter { background-color: #1da1f2; }
+.share-btn.instagram { background-color: #e4405f; }
+
+.share-btn:hover {
+    opacity: 0.8;
+}
+
 @media (max-width: 768px) {
     .game-grid {
-        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); /* Más pequeño en móvil */
+        gap: 15px;
     }
     header h1 {
         font-size: 2rem;
     }
     header p {
         font-size: 1rem;
+    }
+    .game-card h3 {
+        font-size: 1.2rem;
+    }
+    .game-card p {
+        font-size: 0.85rem;
+    }
+    .play-button {
+        padding: 0.5rem 1.2rem;
+        font-size: 0.9rem;
+    }
+    .modal-header h2 {
+        font-size: 1.4rem;
+    }
+    .close-modal {
+        font-size: 1.4rem;
+    }
+    .share-btn {
+        font-size: 1.2rem;
+        padding: 6px;
     }
 }
