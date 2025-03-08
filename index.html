@@ -12,218 +12,306 @@
     <header>
         <h1>MinijuegoLivan</h1>
         <p>¡Hola, soy Livan! Bienvenidos a mi sitio de juegos gratis online. Acá tenés acción, carreras, deportes y más para disfrutar cuando quieras.</p>
+        <div class="category-filter">
+            <button class="filter-btn" data-category="all">Todos</button>
+            <button class="filter-btn" data-category="action">Acción</button>
+            <button class="filter-btn" data-category="racing">Carreras</button>
+            <button class="filter-btn" data-category="sports">Deportes</button>
+            <button class="filter-btn" data-category="puzzles">Puzles</button>
+            <button class="filter-btn" data-category="multiplayer">Multijugador</button>
+        </div>
     </header>
 
-    <div class="game-grid">
-        <div class="game-card">
-            <img src="1.jpg" alt="Bullet Force Multiplayer">
-            <h3>Bullet Force Multiplayer</h3>
-            <p>Shooter multijugador con gráficos intensos y pura adrenalina.</p>
-            <button class="play-button" onclick="openGameModal('Bullet Force Multiplayer', 'game1')">
-                <i class="fas fa-play"></i> Jugar
-            </button>
+    <section class="category" data-category="action">
+        <h2>Acción</h2>
+        <div class="game-grid">
+            <div class="game-card" data-category="action multiplayer">
+                <img src="1.jpg" alt="Bullet Force Multiplayer">
+                <h3>Bullet Force Multiplayer</h3>
+                <p>Shooter multijugador con gráficos intensos y pura adrenalina.</p>
+                <span class="platform">📱💻</span>
+                <button class="play-button" onclick="openGameModal('Bullet Force Multiplayer', 'game1')">
+                    <i class="fas fa-play"></i> Jugar
+                </button>
+            </div>
+            <div class="game-card" data-category="action multiplayer">
+                <img src="2.jpg" alt="Krunker.io">
+                <h3>Krunker.io</h3>
+                <p>Disparos rápidos en un FPS online que te engancha.</p>
+                <span class="platform">📱💻</span>
+                <button class="play-button" onclick="openGameModal('Krunker.io', 'game2')">
+                    <i class="fas fa-play"></i> Jugar
+                </button>
+            </div>
+            <div class="game-card" data-category="action">
+                <img src="12.jpg" alt="Subway Clash 3D">
+                <h3>Subway Clash 3D</h3>
+                <p>Batallas subterráneas llenas de acción y caos.</p>
+                <span class="platform">💻</span>
+                <button class="play-button" onclick="openGameModal('Subway Clash 3D', 'game12')">
+                    <i class="fas fa-play"></i> Jugar
+                </button>
+            </div>
+            <div class="game-card" data-category="action">
+                <img src="18.jpg" alt="Tank Trouble">
+                <h3>Tank Trouble</h3>
+                <p>Tanques en laberintos para batallas épicas.</p>
+                <span class="platform">💻</span>
+                <button class="play-button" onclick="openGameModal('Tank Trouble', 'game18')">
+                    <i class="fas fa-play"></i> Jugar
+                </button>
+            </div>
+            <div class="game-card" data-category="action">
+                <img src="19.jpg" alt="Gun Mayhem 2">
+                <h3>Gun Mayhem 2</h3>
+                <p>Duelos frenéticos con armas y saltos locos.</p>
+                <span class="platform">💻</span>
+                <button class="play-button" onclick="openGameModal('Gun Mayhem 2', 'game19')">
+                    <i class="fas fa-play"></i> Jugar
+                </button>
+            </div>
+            <div class="game-card" data-category="action">
+                <img src="20.jpg" alt="Getaway Shootout">
+                <h3>Getaway Shootout</h3>
+                <p>Carreras y tiroteos en un caos para dos jugadores.</p>
+                <span class="platform">💻</span>
+                <button class="play-button" onclick="openGameModal('Getaway Shootout', 'game20')">
+                    <i class="fas fa-play"></i> Jugar
+                </button>
+            </div>
+            <div class="game-card" data-category="action">
+                <img src="22.jpg" alt="Rooftop Snipers">
+                <h3>Rooftop Snipers</h3>
+                <p>Duelos en tejados con disparos precisos y tensión.</p>
+                <span class="platform">💻</span>
+                <button class="play-button" onclick="openGameModal('Rooftop Snipers', 'game22')">
+                    <i class="fas fa-play"></i> Jugar
+                </button>
+            </div>
         </div>
-        <div class="game-card">
-            <img src="2.jpg" alt="Krunker.io">
-            <h3>Krunker.io</h3>
-            <p>Disparos rápidos en un FPS online que te engancha.</p>
-            <button class="play-button" onclick="openGameModal('Krunker.io', 'game2')">
-                <i class="fas fa-play"></i> Jugar
-            </button>
+    </section>
+
+    <section class="category" data-category="racing">
+        <h2>Carreras</h2>
+        <div class="game-grid">
+            <div class="game-card" data-category="racing">
+                <img src="3.jpg" alt="Rally Point 3">
+                <h3>Rally Point 3</h3>
+                <p>Carreras rally con autos potentes y pistas extremas.</p>
+                <span class="platform">💻</span>
+                <button class="play-button" onclick="openGameModal('Rally Point 3', 'game3')">
+                    <i class="fas fa-play"></i> Jugar
+                </button>
+            </div>
+            <div class="game-card" data-category="racing">
+                <img src="4.jpg" alt="Mad Truck Challenge">
+                <h3>Mad Truck Challenge</h3>
+                <p>Camionetas monstruo en competencias salvajes.</p>
+                <span class="platform">💻</span>
+                <button class="play-button" onclick="openGameModal('Mad Truck Challenge', 'game4')">
+                    <i class="fas fa-play"></i> Jugar
+                </button>
+            </div>
+            <div class="game-card" data-category="racing">
+                <img src="5.png" alt="Drift Hunters">
+                <h3>Drift Hunters</h3>
+                <p>Drifteá autos realistas en circuitos abiertos.</p>
+                <span class="platform">💻</span>
+                <button class="play-button" onclick="openGameModal('Drift Hunters', 'game5')">
+                    <i class="fas fa-play"></i> Jugar
+                </button>
+            </div>
+            <div class="game-card" data-category="racing">
+                <img src="6.png" alt="Super Bike The Champion">
+                <h3>Super Bike The Champion</h3>
+                <p>Carreras de motos con velocidad y curvas locas.</p>
+                <span class="platform">💻</span>
+                <button class="play-button" onclick="openGameModal('Super Bike The Champion', 'game6')">
+                    <i class="fas fa-play"></i> Jugar
+                </button>
+            </div>
+            <div class="game-card" data-category="racing multiplayer">
+                <img src="15.jpg" alt="Smash Karts">
+                <h3>Smash Karts</h3>
+                <p>Karts con armas para peleas explosivas y divertidas.</p>
+                <span class="platform">📱💻</span>
+                <button class="play-button" onclick="openGameModal('Smash Karts', 'game15')">
+                    <i class="fas fa-play"></i> Jugar
+                </button>
+            </div>
+            <div class="game-card" data-category="racing">
+                <img src="17.png" alt="Super Star Car">
+                <h3>Super Star Car</h3>
+                <p>Compite como piloto estrella en carreras pro.</p>
+                <span class="platform">💻</span>
+                <button class="play-button" onclick="openGameModal('Super Star Car', 'game17')">
+                    <i class="fas fa-play"></i> Jugar
+                </button>
+            </div>
+            <div class="game-card" data-category="racing">
+                <img src="21.jpg" alt="City Car Driving Simulator">
+                <h3>City Car Driving Simulator</h3>
+                <p>Conducí por la ciudad con autos realistas.</p>
+                <span class="platform">💻</span>
+                <button class="play-button" onclick="openGameModal('City Car Driving Simulator', 'game21')">
+                    <i class="fas fa-play"></i> Jugar
+                </button>
+            </div>
         </div>
-        <div class="game-card">
-            <img src="3.jpg" alt="Rally Point 3">
-            <h3>Rally Point 3</h3>
-            <p>Carreras rally con autos potentes y pistas extremas.</p>
-            <button class="play-button" onclick="openGameModal('Rally Point 3', 'game3')">
-                <i class="fas fa-play"></i> Jugar
-            </button>
+    </section>
+
+    <section class="category" data-category="sports">
+        <h2>Deportes</h2>
+        <div class="game-grid">
+            <div class="game-card" data-category="sports">
+                <img src="7.jpg" alt="Penalty Shooters 2">
+                <h3>Penalty Shooters 2</h3>
+                <p>Tiros penales para probar tu puntería.</p>
+                <span class="platform">📱💻</span>
+                <button class="play-button" onclick="openGameModal('Penalty Shooters 2', 'game7')">
+                    <i class="fas fa-play"></i> Jugar
+                </button>
+            </div>
+            <div class="game-card" data-category="sports">
+                <img src="8.jpg" alt="Table Tennis World Tour">
+                <h3>Table Tennis World Tour</h3>
+                <p>Tenis de mesa con rivales globales.</p>
+                <span class="platform">📱💻</span>
+                <button class="play-button" onclick="openGameModal('Table Tennis World Tour', 'game8')">
+                    <i class="fas fa-play"></i> Jugar
+                </button>
+            </div>
+            <div class="game-card" data-category="sports">
+                <img src="9.png" alt="8 Ball Billiards Classic">
+                <h3>8 Ball Billiards Classic</h3>
+                <p>Pool clásico para amantes del billar.</p>
+                <span class="platform">📱💻</span>
+                <button class="play-button" onclick="openGameModal('8 Ball Billiards Classic', 'game9')">
+                    <i class="fas fa-play"></i> Jugar
+                </button>
+            </div>
+            <div class="game-card" data-category="sports">
+                <img src="23.jpg" alt="Basket Random">
+                <h3>Basket Random</h3>
+                <p>Básquet caótico con física divertida.</p>
+                <span class="platform">📱💻</span>
+                <button class="play-button" onclick="openGameModal('Basket Random', 'game23')">
+                    <i class="fas fa-play"></i> Jugar
+                </button>
+            </div>
         </div>
-        <div class="game-card">
-            <img src="4.jpg" alt="Mad Truck Challenge">
-            <h3>Mad Truck Challenge</h3>
-            <p>Camionetas monstruo en competencias salvajes.</p>
-            <button class="play-button" onclick="openGameModal('Mad Truck Challenge', 'game4')">
-                <i class="fas fa-play"></i> Jugar
-            </button>
+    </section>
+
+    <section class="category" data-category="puzzles">
+        <h2>Puzles</h2>
+        <div class="game-grid">
+            <div class="game-card" data-category="puzzles">
+                <img src="11.png" alt="2048">
+                <h3>2048</h3>
+                <p>Combina números en este puzzle desafiante.</p>
+                <span class="platform">📱💻</span>
+                <button class="play-button" onclick="openGameModal('2048', 'game11')">
+                    <i class="fas fa-play"></i> Jugar
+                </button>
+            </div>
         </div>
-        <div class="game-card">
-            <img src="5.png" alt="Drift Hunters">
-            <h3>Drift Hunters</h3>
-            <p>Drifteá autos realistas en circuitos abiertos.</p>
-            <button class="play-button" onclick="openGameModal('Drift Hunters', 'game5')">
-                <i class="fas fa-play"></i> Jugar
-            </button>
+    </section>
+
+    <section class="category" data-category="multiplayer">
+        <h2>Multijugador</h2>
+        <div class="game-grid">
+            <div class="game-card" data-category="action multiplayer">
+                <img src="1.jpg" alt="Bullet Force Multiplayer">
+                <h3>Bullet Force Multiplayer</h3>
+                <p>Shooter multijugador con gráficos intensos y pura adrenalina.</p>
+                <span class="platform">📱💻</span>
+                <button class="play-button" onclick="openGameModal('Bullet Force Multiplayer', 'game1')">
+                    <i class="fas fa-play"></i> Jugar
+                </button>
+            </div>
+            <div class="game-card" data-category="action multiplayer">
+                <img src="2.jpg" alt="Krunker.io">
+                <h3>Krunker.io</h3>
+                <p>Disparos rápidos en un FPS online que te engancha.</p>
+                <span class="platform">📱💻</span>
+                <button class="play-button" onclick="openGameModal('Krunker.io', 'game2')">
+                    <i class="fas fa-play"></i> Jugar
+                </button>
+            </div>
+            <div class="game-card" data-category="multiplayer">
+                <img src="10.jpg" alt="Paper.io 2">
+                <h3>Paper.io 2</h3>
+                <p>Conquistá territorio con táctica y cuidado.</p>
+                <span class="platform">📱💻</span>
+                <button class="play-button" onclick="openGameModal('Paper.io 2', 'game10')">
+                    <i class="fas fa-play"></i> Jugar
+                </button>
+            </div>
+            <div class="game-card" data-category="racing multiplayer">
+                <img src="15.jpg" alt="Smash Karts">
+                <h3>Smash Karts</h3>
+                <p>Karts con armas para peleas explosivas y divertidas.</p>
+                <span class="platform">📱💻</span>
+                <button class="play-button" onclick="openGameModal('Smash Karts', 'game15')">
+                    <i class="fas fa-play"></i> Jugar
+                </button>
+            </div>
+            <div class="game-card" data-category="multiplayer">
+                <img src="16.jpg" alt="Worms Zone">
+                <h3>Worms Zone</h3>
+                <p>Come y crecé en esta aventura de gusanos.</p>
+                <span class="platform">📱💻</span>
+                <button class="play-button" onclick="openGameModal('Worms Zone', 'game16')">
+                    <i class="fas fa-play"></i> Jugar
+                </button>
+            </div>
+            <div class="game-card" data-category="multiplayer">
+                <img src="24.jpg" alt="Slither.io">
+                <h3>Slither.io</h3>
+                <p>Crece tu serpiente esquivando rivales.</p>
+                <span class="platform">📱💻</span>
+                <button class="play-button" onclick="openGameModal('Slither.io', 'game24')">
+                    <i class="fas fa-play"></i> Jugar
+                </button>
+            </div>
+            <div class="game-card" data-category="multiplayer">
+                <img src="25.png" alt="Diep.io">
+                <h3>Diep.io</h3>
+                <p>Mejorá tu tanque y dominá el campo.</p>
+                <span class="platform">📱💻</span>
+                <button class="play-button" onclick="openGameModal('Diep.io', 'game25')">
+                    <i class="fas fa-play"></i> Jugar
+                </button>
+            </div>
+            <div class="game-card" data-category="multiplayer">
+                <img src="26.jpeg" alt="Happy Wheels">
+                <h3>Happy Wheels</h3>
+                <p>Aventura loca con obstáculos mortales.</p>
+                <span class="platform">💻</span>
+                <button class="play-button" onclick="openGameModal('Happy Wheels', 'game26')">
+                    <i class="fas fa-play"></i> Jugar
+                </button>
+            </div>
+            <div class="game-card" data-category="multiplayer">
+                <img src="27.jpg" alt="Skribbl.io">
+                <h3>Skribbl.io</h3>
+                <p>Dibujá y adiviná palabras con amigos online.</p>
+                <span class="platform">📱💻</span>
+                <button class="play-button" onclick="openGameModal('Skribbl.io', 'game27')">
+                    <i class="fas fa-play"></i> Jugar
+                </button>
+            </div>
+            <div class="game-card" data-category="multiplayer">
+                <img src="28.jpg" alt="Subway Surfers">
+                <h3>Subway Surfers</h3>
+                <p>Corré y esquivá trenes en esta aventura sin fin.</p>
+                <span class="platform">📱💻</span>
+                <button class="play-button" onclick="openGameModal('Subway Surfers', 'game28')">
+                    <i class="fas fa-play"></i> Jugar
+                </button>
+            </div>
         </div>
-        <div class="game-card">
-            <img src="6.png" alt="Super Bike The Champion">
-            <h3>Super Bike The Champion</h3>
-            <p>Carreras de motos con velocidad y curvas locas.</p>
-            <button class="play-button" onclick="openGameModal('Super Bike The Champion', 'game6')">
-                <i class="fas fa-play"></i> Jugar
-            </button>
-        </div>
-        <div class="game-card">
-            <img src="7.jpg" alt="Penalty Shooters 2">
-            <h3>Penalty Shooters 2</h3>
-            <p>Tiros penales para probar tu puntería.</p>
-            <button class="play-button" onclick="openGameModal('Penalty Shooters 2', 'game7')">
-                <i class="fas fa-play"></i> Jugar
-            </button>
-        </div>
-        <div class="game-card">
-            <img src="8.jpg" alt="Table Tennis World Tour">
-            <h3>Table Tennis World Tour</h3>
-            <p>Tenis de mesa con rivales globales.</p>
-            <button class="play-button" onclick="openGameModal('Table Tennis World Tour', 'game8')">
-                <i class="fas fa-play"></i> Jugar
-            </button>
-        </div>
-        <div class="game-card">
-            <img src="9.png" alt="8 Ball Billiards Classic">
-            <h3>8 Ball Billiards Classic</h3>
-            <p>Pool clásico para amantes del billar.</p>
-            <button class="play-button" onclick="openGameModal('8 Ball Billiards Classic', 'game9')">
-                <i class="fas fa-play"></i> Jugar
-            </button>
-        </div>
-        <div class="game-card">
-            <img src="10.jpg" alt="Paper.io 2">
-            <h3>Paper.io 2</h3>
-            <p>Conquistá territorio con táctica y cuidado.</p>
-            <button class="play-button" onclick="openGameModal('Paper.io 2', 'game10')">
-                <i class="fas fa-play"></i> Jugar
-            </button>
-        </div>
-        <div class="game-card">
-            <img src="11.png" alt="2048">
-            <h3>2048</h3>
-            <p>Combina números en este puzzle desafiante.</p>
-            <button class="play-button" onclick="openGameModal('2048', 'game11')">
-                <i class="fas fa-play"></i> Jugar
-            </button>
-        </div>
-        <div class="game-card">
-            <img src="12.jpg" alt="Subway Clash 3D">
-            <h3>Subway Clash 3D</h3>
-            <p>Batallas subterráneas llenas de acción y caos.</p>
-            <button class="play-button" onclick="openGameModal('Subway Clash 3D', 'game12')">
-                <i class="fas fa-play"></i> Jugar
-            </button>
-        </div>
-        <div class="game-card">
-            <img src="15.jpg" alt="Smash Karts">
-            <h3>Smash Karts</h3>
-            <p>Karts con armas para peleas explosivas y divertidas.</p>
-            <button class="play-button" onclick="openGameModal('Smash Karts', 'game15')">
-                <i class="fas fa-play"></i> Jugar
-            </button>
-        </div>
-        <div class="game-card">
-            <img src="16.jpg" alt="Worms Zone">
-            <h3>Worms Zone</h3>
-            <p>Come y crecé en esta aventura de gusanos.</p>
-            <button class="play-button" onclick="openGameModal('Worms Zone', 'game16')">
-                <i class="fas fa-play"></i> Jugar
-            </button>
-        </div>
-        <div class="game-card">
-            <img src="17.png" alt="Super Star Car">
-            <h3>Super Star Car</h3>
-            <p>Compite como piloto estrella en carreras pro.</p>
-            <button class="play-button" onclick="openGameModal('Super Star Car', 'game17')">
-                <i class="fas fa-play"></i> Jugar
-            </button>
-        </div>
-        <div class="game-card">
-            <img src="18.jpg" alt="Tank Trouble">
-            <h3>Tank Trouble</h3>
-            <p>Tanques en laberintos para batallas épicas.</p>
-            <button class="play-button" onclick="openGameModal('Tank Trouble', 'game18')">
-                <i class="fas fa-play"></i> Jugar
-            </button>
-        </div>
-        <div class="game-card">
-            <img src="19.jpg" alt="Gun Mayhem 2">
-            <h3>Gun Mayhem 2</h3>
-            <p>Duelos frenéticos con armas y saltos locos.</p>
-            <button class="play-button" onclick="openGameModal('Gun Mayhem 2', 'game19')">
-                <i class="fas fa-play"></i> Jugar
-            </button>
-        </div>
-        <div class="game-card">
-            <img src="20.jpg" alt="Getaway Shootout">
-            <h3>Getaway Shootout</h3>
-            <p>Carreras y tiroteos en un caos para dos jugadores.</p>
-            <button class="play-button" onclick="openGameModal('Getaway Shootout', 'game20')">
-                <i class="fas fa-play"></i> Jugar
-            </button>
-        </div>
-        <div class="game-card">
-            <img src="21.jpg" alt="City Car Driving Simulator">
-            <h3>City Car Driving Simulator</h3>
-            <p>Conducí por la ciudad con autos realistas.</p>
-            <button class="play-button" onclick="openGameModal('City Car Driving Simulator', 'game21')">
-                <i class="fas fa-play"></i> Jugar
-            </button>
-        </div>
-        <div class="game-card">
-            <img src="22.jpg" alt="Rooftop Snipers">
-            <h3>Rooftop Snipers</h3>
-            <p>Duelos en tejados con disparos precisos y tensión.</p>
-            <button class="play-button" onclick="openGameModal('Rooftop Snipers', 'game22')">
-                <i class="fas fa-play"></i> Jugar
-            </button>
-        </div>
-        <div class="game-card">
-            <img src="23.jpg" alt="Basket Random">
-            <h3>Basket Random</h3>
-            <p>Básquet caótico con física divertida.</p>
-            <button class="play-button" onclick="openGameModal('Basket Random', 'game23')">
-                <i class="fas fa-play"></i> Jugar
-            </button>
-        </div>
-        <div class="game-card">
-            <img src="24.jpg" alt="Slither.io">
-            <h3>Slither.io</h3>
-            <p>Crece tu serpiente esquivando rivales.</p>
-            <button class="play-button" onclick="openGameModal('Slither.io', 'game24')">
-                <i class="fas fa-play"></i> Jugar
-            </button>
-        </div>
-        <div class="game-card">
-            <img src="25.png" alt="Diep.io">
-            <h3>Diep.io</h3>
-            <p>Mejorá tu tanque y dominá el campo.</p>
-            <button class="play-button" onclick="openGameModal('Diep.io', 'game25')">
-                <i class="fas fa-play"></i> Jugar
-            </button>
-        </div>
-        <div class="game-card">
-            <img src="26.jpeg" alt="Happy Wheels">
-            <h3>Happy Wheels</h3>
-            <p>Aventura loca con obstáculos mortales.</p>
-            <button class="play-button" onclick="openGameModal('Happy Wheels', 'game26')">
-                <i class="fas fa-play"></i> Jugar
-            </button>
-        </div>
-        <div class="game-card">
-            <img src="27.jpg" alt="Skribbl.io">
-            <h3>Skribbl.io</h3>
-            <p>Dibujá y adiviná palabras con amigos online.</p>
-            <button class="play-button" onclick="openGameModal('Skribbl.io', 'game27')">
-                <i class="fas fa-play"></i> Jugar
-            </button>
-        </div>
-        <div class="game-card">
-            <img src="28.jpg" alt="Subway Surfers">
-            <h3>Subway Surfers</h3>
-            <p>Corré y esquivá trenes en esta aventura sin fin.</p>
-            <button class="play-button" onclick="openGameModal('Subway Surfers', 'game28')">
-                <i class="fas fa-play"></i> Jugar
-            </button>
-        </div>
-    </div>
+    </section>
 
     <div class="game-modal" id="gameModal">
         <div class="modal-content">
