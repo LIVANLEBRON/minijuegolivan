@@ -8,17 +8,17 @@
 body {
     background: linear-gradient(45deg, #0f2027, #203a43, #2c5364);
     color: #fff;
-    padding: 1rem; /* Reducido para móvil */
+    padding: 1rem;
     min-height: 100vh;
 }
 
 header {
     background: linear-gradient(90deg, #6200ee, #b388ff);
-    padding: 1rem; /* Reducido para móvil */
+    padding: 1rem;
     text-align: center;
     border-radius: 15px;
     box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
-    margin-bottom: 1.5rem; /* Ajustado */
+    margin-bottom: 1.5rem;
 }
 
 header h1 {
@@ -35,14 +35,14 @@ header p {
 .game-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
-    gap: 20px; /* Reducido para móvil */
-    padding: 0.5rem; /* Ajustado */
+    gap: 20px;
+    padding: 0.5rem;
 }
 
 .game-card {
     background: rgba(255, 255, 255, 0.1);
     border-radius: 15px;
-    padding: 1rem; /* Reducido para móvil */
+    padding: 1rem;
     text-align: center;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
     border: 1px solid rgba(255, 255, 255, 0.2);
@@ -51,7 +51,7 @@ header p {
 .game-card img {
     width: 100%;
     border-radius: 10px;
-    margin-bottom: 0.8rem; /* Ajustado */
+    margin-bottom: 0.8rem;
 }
 
 .game-card h3 {
@@ -60,19 +60,19 @@ header p {
 }
 
 .game-card p {
-    font-size: 0.9rem; /* Reducido para móvil */
+    font-size: 0.9rem;
     color: #ddd;
-    margin-bottom: 0.8rem; /* Ajustado */
+    margin-bottom: 0.8rem;
 }
 
 .play-button {
     background: linear-gradient(90deg, #6200ee, #b388ff);
     color: white;
     border: none;
-    padding: 0.6rem 1.5rem; /* Reducido para móvil */
+    padding: 0.6rem 1.5rem;
     border-radius: 30px;
     cursor: pointer;
-    font-size: 1rem; /* Ajustado */
+    font-size: 1rem;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
@@ -98,7 +98,7 @@ header p {
 
 .modal-content {
     background-color: #fff;
-    width: 95%; /* Más ancho en móvil */
+    width: 95%;
     max-width: 900px;
     height: 90vh;
     border-radius: 15px;
@@ -115,7 +115,7 @@ header p {
 }
 
 .modal-header h2 {
-    font-size: 1.6rem; /* Reducido para móvil */
+    font-size: 1.6rem;
 }
 
 .close-modal {
@@ -132,25 +132,33 @@ header p {
 
 .game-iframe {
     width: 100%;
-    height: calc(90vh - 50px); /* Ajustado para móvil */
+    height: calc(90vh - 50px);
     border: none;
     background-color: #000;
 }
 
 footer {
     text-align: center;
-    padding: 1rem;
-    margin-top: 1.5rem; /* Ajustado */
+    padding: 1.5rem 1rem; /* Más padding para que respire */
+    margin-top: 2rem;
+    background: rgba(255, 255, 255, 0.05); /* Fondo sutil */
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-content {
+    max-width: 600px; /* Limita el ancho en pantallas grandes */
+    margin: 0 auto;
 }
 
 footer p {
-    margin-bottom: 0.5rem;
+    font-size: 0.9rem; /* Más pequeño y legible */
+    margin-bottom: 1rem; /* Espacio antes de los botones */
 }
 
 footer a {
     color: #b388ff;
     text-decoration: none;
-    margin: 0 0.5rem;
+    margin: 0 0.4rem;
 }
 
 footer a:hover {
@@ -160,29 +168,33 @@ footer a:hover {
 .share-buttons {
     display: flex;
     justify-content: center;
-    gap: 12px; /* Ajustado para móvil */
+    gap: 20px; /* Más espacio entre botones */
 }
 
 .share-btn {
     color: #fff;
-    font-size: 1.5rem;
-    padding: 8px;
+    font-size: 1.6rem; /* Íconos más grandes */
+    padding: 10px; /* Más área clickable */
     border-radius: 50%;
     text-decoration: none;
+    transition: transform 0.2s; /* Suave al hacer hover */
 }
 
-.share-btn.whatsapp { background-color: #25D366; }
-.share-btn.facebook { background-color: #3b5998; }
-.share-btn.twitter { background-color: #1da1f2; }
-.share-btn.instagram { background-color: #e4405f; }
+.share-btn.whatsapp {
+    background: linear-gradient(45deg, #c13584, #e4405f, #f77737); /* Gradiente tipo Instagram */
+}
+
+.share-btn.instagram {
+    background: linear-gradient(45deg, #c13584, #e4405f, #f77737); /* Igual para consistencia */
+}
 
 .share-btn:hover {
-    opacity: 0.8;
+    transform: scale(1.1); /* Leve agrandamiento al pasar el mouse */
 }
 
 @media (max-width: 768px) {
     .game-grid {
-        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); /* Más pequeño en móvil */
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
         gap: 15px;
     }
     header h1 {
@@ -207,8 +219,21 @@ footer a:hover {
     .close-modal {
         font-size: 1.4rem;
     }
+    footer {
+        padding: 1rem 0.5rem; /* Menos padding lateral en móvil */
+    }
+    footer p {
+        font-size: 0.8rem; /* Más pequeño en móvil */
+        line-height: 1.4; /* Mejor legibilidad */
+    }
+    footer a {
+        margin: 0 0.3rem; /* Menos espacio entre links */
+    }
+    .share-buttons {
+        gap: 15px; /* Ajustado para móvil */
+    }
     .share-btn {
-        font-size: 1.2rem;
-        padding: 6px;
+        font-size: 1.4rem; /* Íconos más pequeños en móvil */
+        padding: 8px;
     }
 }
