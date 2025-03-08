@@ -2,27 +2,62 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>https://www.minijuegolivan.org/</loc>
-        <lastmod>2025-03-07</lastmod>
+        <lastmod>2025-03-08</lastmod>
+        <changefreq>daily</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
         <loc>https://www.minijuegolivan.org/privacy.html</loc>
-        <lastmod>2025-03-07</lastmod>
+        <lastmod>2025-03-08</lastmod>
+        <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://www.minijuegolivan.org/terms.html</loc>
-        <lastmod>2025-03-07</lastmod>
+        <lastmod>2025-03-08</lastmod>
+        <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://www.minijuegolivan.org/contact.html</loc>
-        <lastmod>2025-03-07</lastmod>
+        <lastmod>2025-03-08</lastmod>
+        <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://www.minijuegolivan.org/reviews.html</loc>
-        <lastmod>2025-03-07</lastmod>
+        <lastmod>2025-03-08</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://www.minijuegolivan.org/#action</loc>
+        <lastmod>2025-03-08</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://www.minijuegolivan.org/#racing</loc>
+        <lastmod>2025-03-08</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://www.minijuegolivan.org/#sports</loc>
+        <lastmod>2025-03-08</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://www.minijuegolivan.org/#puzzles</loc>
+        <lastmod>2025-03-08</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://www.minijuegolivan.org/#multiplayer</loc>
+        <lastmod>2025-03-08</lastmod>
+        <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
 </urlset>
