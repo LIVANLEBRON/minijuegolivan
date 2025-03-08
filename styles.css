@@ -1,34 +1,59 @@
+:root {
+    --primary-blue: #00B2FF;
+    --dark-blue: #0077FF;
+    --primary-orange: #FF8F00;
+    --dark-orange: #FF5500;
+    --bg-color: #F0F0F0;
+    --text-color: #000000;
+    --card-radius: 15px;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 body {
-    background: linear-gradient(45deg, #0f2027, #203a43, #2c5364);
-    color: #fff;
+    background: var(--bg-color);
+    color: var(--text-color);
     padding: 1rem;
     min-height: 100vh;
 }
 
 header {
-    background: linear-gradient(90deg, #6200ee, #b388ff);
+    background: linear-gradient(90deg, var(--primary-blue), var(--dark-blue));
     padding: 1rem;
     text-align: center;
-    border-radius: 15px;
-    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
+    border-radius: var(--card-radius);
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
     margin-bottom: 1.5rem;
 }
 
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
 .logo {
-    max-width: 300px; /* Ajusta según el tamaño de tu logo */
+    max-width: 200px;
     height: auto;
     margin-bottom: 1rem;
 }
 
+.menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    color: #fff;
+    cursor: pointer;
+}
+
 header p {
     font-size: 1.2rem;
+    color: #fff;
     margin-bottom: 1rem;
 }
 
@@ -40,30 +65,29 @@ header p {
 }
 
 .filter-btn {
-    background: rgba(255, 255, 255, 0.1);
+    background: linear-gradient(90deg, var(--primary-blue), var(--dark-blue));
     color: #fff;
-    border: 1px solid #b388ff;
+    border: none;
     padding: 0.5rem 1rem;
-    border-radius: 20px;
+    border-radius: 25px;
     cursor: pointer;
-    font-size: 1rem;
-    transition: background 0.3s;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.9rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s, background 0.3s;
 }
 
 .filter-btn:hover, .filter-btn.active {
-    background: #b388ff;
-}
-
-.category {
-    margin-bottom: 2rem;
+    background: linear-gradient(90deg, var(--primary-orange), var(--dark-orange));
+    transform: scale(1.05);
 }
 
 .category h2 {
+    font-family: 'Press Start 2P', cursive;
     font-size: 2rem;
-    color: #b388ff;
+    color: var(--dark-blue);
     text-align: center;
     margin-bottom: 1rem;
-    text-transform: uppercase;
 }
 
 .game-grid {
@@ -74,12 +98,20 @@ header p {
 }
 
 .game-card {
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 15px;
+    background: #fff;
+    border-radius: var(--card-radius);
     padding: 1rem;
     text-align: center;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    border: 2px solid transparent;
+    background: linear-gradient(45deg, var(--primary-blue), var(--dark-blue)) padding-box,
+                linear-gradient(45deg, var(--primary-orange), var(--dark-orange)) border-box;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.game-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3), 0 0 15px var(--primary-orange);
 }
 
 .game-card img {
@@ -89,13 +121,15 @@ header p {
 }
 
 .game-card h3 {
-    font-size: 1.4rem;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.2rem;
+    color: var(--text-color);
     margin-bottom: 0.5rem;
 }
 
 .game-card p {
     font-size: 0.9rem;
-    color: #ddd;
+    color: #555;
     margin-bottom: 0.5rem;
 }
 
@@ -106,18 +140,21 @@ header p {
 }
 
 .play-button {
-    background: linear-gradient(90deg, #6200ee, #b388ff);
-    color: white;
+    background: linear-gradient(90deg, var(--primary-orange), var(--dark-orange));
+    color: #fff;
     border: none;
     padding: 0.6rem 1.5rem;
-    border-radius: 30px;
+    border-radius: 25px;
     cursor: pointer;
-    font-size: 1rem;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.9rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s, background 0.3s;
 }
 
 .play-button:hover {
-    background: linear-gradient(90deg, #b388ff, #6200ee);
+    background: linear-gradient(90deg, var(--dark-blue), var(--primary-blue));
+    transform: scale(1.05);
 }
 
 .play-button i {
@@ -141,13 +178,14 @@ header p {
     width: 95%;
     max-width: 900px;
     height: 90vh;
-    border-radius: 15px;
+    border-radius: var(--card-radius);
     overflow: hidden;
+    border: 2px solid var(--dark-blue);
 }
 
 .modal-header {
-    background: linear-gradient(90deg, #6200ee, #b388ff);
-    color: white;
+    background: linear-gradient(90deg, var(--primary-blue), var(--dark-blue));
+    color: #fff;
     padding: 1rem;
     display: flex;
     justify-content: space-between;
@@ -155,19 +193,21 @@ header p {
 }
 
 .modal-header h2 {
+    font-family: 'Press Start 2P', cursive;
     font-size: 1.6rem;
 }
 
 .close-modal {
     background: none;
     border: none;
-    color: white;
+    color: #fff;
     font-size: 1.6rem;
     cursor: pointer;
+    transition: color 0.2s;
 }
 
 .close-modal:hover {
-    color: #ffebee;
+    color: var(--primary-orange);
 }
 
 .game-iframe {
@@ -181,8 +221,9 @@ footer {
     text-align: center;
     padding: 1.5rem 1rem;
     margin-top: 2rem;
-    background: rgba(255, 255, 255, 0.05);
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    background: linear-gradient(90deg, var(--primary-blue), var(--dark-blue));
+    color: #fff;
+    border-radius: var(--card-radius);
 }
 
 .footer-content {
@@ -196,13 +237,14 @@ footer p {
 }
 
 footer a {
-    color: #b388ff;
+    color: var(--primary-orange);
     text-decoration: none;
     margin: 0 0.4rem;
+    transition: color 0.2s;
 }
 
 footer a:hover {
-    color: #6200ee;
+    color: #fff;
 }
 
 .share-buttons {
@@ -217,15 +259,8 @@ footer a:hover {
     padding: 10px;
     border-radius: 50%;
     text-decoration: none;
+    background: linear-gradient(45deg, var(--primary-orange), var(--dark-orange));
     transition: transform 0.2s;
-}
-
-.share-btn.whatsapp {
-    background: linear-gradient(45deg, #c13584, #e4405f, #f77737);
-}
-
-.share-btn.instagram {
-    background: linear-gradient(45deg, #c13584, #e4405f, #f77737);
 }
 
 .share-btn:hover {
@@ -234,7 +269,23 @@ footer a:hover {
 
 @media (max-width: 768px) {
     .logo {
-        max-width: 200px; /* Más pequeño en móvil */
+        max-width: 150px;
+    }
+    .menu-toggle {
+        display: block;
+    }
+    .category-filter {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: var(--dark-blue);
+        padding: 1rem;
+        position: absolute;
+        top: 100%;
+        left: 0;
+    }
+    .category-filter.active {
+        display: flex;
     }
     .category h2 {
         font-size: 1.6rem;
@@ -247,7 +298,7 @@ footer a:hover {
         font-size: 1rem;
     }
     .game-card h3 {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
     .game-card p {
         font-size: 0.85rem;
@@ -257,7 +308,7 @@ footer a:hover {
     }
     .play-button {
         padding: 0.5rem 1.2rem;
-        font-size: 0.9rem;
+        font-size: 0.8rem;
     }
     .modal-header h2 {
         font-size: 1.4rem;
@@ -265,22 +316,12 @@ footer a:hover {
     .close-modal {
         font-size: 1.4rem;
     }
-    .filter-btn {
-        padding: 0.4rem 0.8rem;
-        font-size: 0.9rem;
-    }
     footer {
         padding: 1rem 0.5rem;
     }
     footer p {
         font-size: 0.8rem;
         line-height: 1.4;
-    }
-    footer a {
-        margin: 0 0.3rem;
-    }
-    .share-buttons {
-        gap: 15px;
     }
     .share-btn {
         font-size: 1.4rem;

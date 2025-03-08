@@ -75,3 +75,9 @@ document.querySelectorAll('.filter-btn').forEach(button => {
         });
     });
 });
+
+// Menú hamburguesa
+document.querySelector('.menu-toggle').addEventListener('click', () => {
+    const menu = document.querySelector('.category-filter');
+    menu.classList.toggle('active');
+});
