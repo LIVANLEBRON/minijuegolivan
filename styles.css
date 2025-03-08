@@ -21,15 +21,14 @@ header {
     margin-bottom: 1.5rem;
 }
 
-header h1 {
-    font-size: 2.8rem;
-    text-transform: uppercase;
-    letter-spacing: 3px;
+.logo {
+    max-width: 300px; /* Ajusta según el tamaño de tu logo */
+    height: auto;
+    margin-bottom: 1rem;
 }
 
 header p {
     font-size: 1.2rem;
-    margin-top: 0.5rem;
     margin-bottom: 1rem;
 }
 
@@ -234,15 +233,15 @@ footer a:hover {
 }
 
 @media (max-width: 768px) {
+    .logo {
+        max-width: 200px; /* Más pequeño en móvil */
+    }
     .category h2 {
         font-size: 1.6rem;
     }
     .game-grid {
         grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
         gap: 15px;
-    }
-    header h1 {
-        font-size: 2rem;
     }
     header p {
         font-size: 1rem;
