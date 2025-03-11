@@ -6,348 +6,579 @@
     <title>MinijuegoLivan - Juegos Gratis Online</title>
     <meta name="description" content="Juegos gratis online en MinijuegoLivan.org: acción, carros, deportes y más">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles-new.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <div class="header-container">
-            <div class="menu-toggle">
-                <i class="fas fa-bars"></i>
+            <div class="logo">
+                <i class="fas fa-gamepad"></i>
+                <span>MinijuegoLivan</span>
             </div>
-            <nav class="category-filter">
-                <button class="filter-btn" data-category="all">Todos</button>
-                <button class="filter-btn" data-category="action">Acción</button>
-                <button class="filter-btn" data-category="racing">Carreras</button>
-                <button class="filter-btn" data-category="sports">Deportes</button>
-                <button class="filter-btn" data-category="puzzles">Puzles</button>
-                <button class="filter-btn" data-category="multiplayer">Multijugador</button>
+            <nav>
+                <div class="search-container">
+                    <input type="text" class="search-box" placeholder="Buscar juegos...">
+                </div>
             </nav>
         </div>
         <p>¡Hola, soy Livan! Bienvenidos a mi sitio de juegos gratis online.</p>
     </header>
 
-    <main>
-        <section class="category" data-category="action">
-            <h2>Acción</h2>
-            <div class="game-grid">
-                <article class="game-card" data-category="action multiplayer">
-                    <img src="1.jpg" alt="Bullet Force Multiplayer">
-                    <h3>Bullet Force Multiplayer</h3>
-                    <p>Shooter multijugador con gráficos intensos y pura adrenalina.</p>
-                    <span class="platform">📱💻</span>
-                    <button class="play-button" onclick="openGameModal('Bullet Force Multiplayer', 'game1')">
-                        <i class="fas fa-play"></i> Jugar
-                    </button>
-                </article>
-                <article class="game-card" data-category="action multiplayer">
-                    <img src="2.jpg" alt="Krunker.io">
-                    <h3>Krunker.io</h3>
-                    <p>Disparos rápidos en un FPS online que te engancha.</p>
-                    <span class="platform">📱💻</span>
-                    <button class="play-button" onclick="openGameModal('Krunker.io', 'game2')">
-                        <i class="fas fa-play"></i> Jugar
-                    </button>
-                </article>
-                <article class="game-card" data-category="action">
-                    <img src="12.jpg" alt="Subway Clash 3D">
-                    <h3>Subway Clash 3D</h3>
-                    <p>Batallas subterráneas llenas de acción y caos.</p>
-                    <span class="platform">💻</span>
-                    <button class="play-button" onclick="openGameModal('Subway Clash 3D', 'game12')">
-                        <i class="fas fa-play"></i> Jugar
-                    </button>
-                </article>
-                <article class="game-card" data-category="action">
-                    <img src="18.jpg" alt="Tank Trouble">
-                    <h3>Tank Trouble</h3>
-                    <p>Tanques en laberintos para batallas épicas.</p>
-                    <span class="platform">💻</span>
-                    <button class="play-button" onclick="openGameModal('Tank Trouble', 'game18')">
-                        <i class="fas fa-play"></i> Jugar
-                    </button>
-                </article>
-                <article class="game-card" data-category="action">
-                    <img src="19.jpg" alt="Gun Mayhem 2">
-                    <h3>Gun Mayhem 2</h3>
-                    <p>Duelos frenéticos con armas y saltos locos.</p>
-                    <span class="platform">💻</span>
-                    <button class="play-button" onclick="openGameModal('Gun Mayhem 2', 'game19')">
-                        <i class="fas fa-play"></i> Jugar
-                    </button>
-                </article>
-                <article class="game-card" data-category="action">
-                    <img src="20.jpg" alt="Getaway Shootout">
-                    <h3>Getaway Shootout</h3>
-                    <p>Carreras y tiroteos en un caos para dos jugadores.</p>
-                    <span class="platform">💻</span>
-                    <button class="play-button" onclick="openGameModal('Getaway Shootout', 'game20')">
-                        <i class="fas fa-play"></i> Jugar
-                    </button>
-                </article>
-                <article class="game-card" data-category="action">
-                    <img src="22.jpg" alt="Rooftop Snipers">
-                    <h3>Rooftop Snipers</h3>
-                    <p>Duelos en tejados con disparos precisos y tensión.</p>
-                    <span class="platform">💻</span>
-                    <button class="play-button" onclick="openGameModal('Rooftop Snipers', 'game22')">
-                        <i class="fas fa-play"></i> Jugar
-                    </button>
-                </article>
-            </div>
-        </section>
+    <div class="container">
+        <aside class="sidebar">
+            <h3>Categorías</h3>
+            <ul class="category-list">
+                <li><a href="#accion"><i class="fas fa-fire"></i>Acción</a></li>
+                <li><a href="#carreras"><i class="fas fa-car"></i>Carreras</a></li>
+                <li><a href="#deportes"><i class="fas fa-basketball-ball"></i>Deportes</a></li>
+                <li><a href="#puzzles"><i class="fas fa-puzzle-piece"></i>Puzles</a></li>
+                <li><a href="#multiplayer"><i class="fas fa-users"></i>Multijugador</a></li>
+            </ul>
+        </aside>
 
-        <section class="category" data-category="racing">
-            <h2>Carreras</h2>
-            <div class="game-grid">
-                <article class="game-card" data-category="racing">
-                    <img src="3.jpg" alt="Rally Point 3">
-                    <h3>Rally Point 3</h3>
-                    <p>Carreras rally con autos potentes y pistas extremas.</p>
-                    <span class="platform">💻</span>
-                    <button class="play-button" onclick="openGameModal('Rally Point 3', 'game3')">
-                        <i class="fas fa-play"></i> Jugar
-                    </button>
-                </article>
-                <article class="game-card" data-category="racing">
-                    <img src="4.jpg" alt="Mad Truck Challenge">
-                    <h3>Mad Truck Challenge</h3>
-                    <p>Camionetas monstruo en competencias salvajes.</p>
-                    <span class="platform">💻</span>
-                    <button class="play-button" onclick="openGameModal('Mad Truck Challenge', 'game4')">
-                        <i class="fas fa-play"></i> Jugar
-                    </button>
-                </article>
-                <article class="game-card" data-category="racing">
-                    <img src="5.png" alt="Drift Hunters">
-                    <h3>Drift Hunters</h3>
-                    <p>Drifteá autos realistas en circuitos abiertos.</p>
-                    <span class="platform">💻</span>
-                    <button class="play-button" onclick="openGameModal('Drift Hunters', 'game5')">
-                        <i class="fas fa-play"></i> Jugar
-                    </button>
-                </article>
-                <article class="game-card" data-category="racing">
-                    <img src="6.png" alt="Super Bike The Champion">
-                    <h3>Super Bike The Champion</h3>
-                    <p>Carreras de motos con velocidad y curvas locas.</p>
-                    <span class="platform">💻</span>
-                    <button class="play-button" onclick="openGameModal('Super Bike The Champion', 'game6')">
-                        <i class="fas fa-play"></i> Jugar
-                    </button>
-                </article>
-                <article class="game-card" data-category="racing multiplayer">
-                    <img src="15.jpg" alt="Smash Karts">
-                    <h3>Smash Karts</h3>
-                    <p>Karts con armas para peleas explosivas y divertidas.</p>
-                    <span class="platform">📱💻</span>
-                    <button class="play-button" onclick="openGameModal('Smash Karts', 'game15')">
-                        <i class="fas fa-play"></i> Jugar
-                    </button>
-                </article>
-                <article class="game-card" data-category="racing">
-                    <img src="17.png" alt="Super Star Car">
-                    <h3>Super Star Car</h3>
-                    <p>Compite como piloto estrella en carreras pro.</p>
-                    <span class="platform">💻</span>
-                    <button class="play-button" onclick="openGameModal('Super Star Car', 'game17')">
-                        <i class="fas fa-play"></i> Jugar
-                    </button>
-                </article>
-                <article class="game-card" data-category="racing">
-                    <img src="21.jpg" alt="City Car Driving Simulator">
-                    <h3>City Car Driving Simulator</h3>
-                    <p>Conducí por la ciudad con autos realistas.</p>
-                    <span class="platform">💻</span>
-                    <button class="play-button" onclick="openGameModal('City Car Driving Simulator', 'game21')">
-                        <i class="fas fa-play"></i> Jugar
-                    </button>
-                </article>
-            </div>
-        </section>
+        <main class="main-content">
+            <section id="accion" class="category">
+                <div class="section-header">
+                    <h2>Acción</h2>
+                </div>
+                <div class="game-grid">
+                    <article class="game-card" data-category="action multiplayer">
+                        <img src="1.jpg" alt="Bullet Force Multiplayer">
+                        <h3>Bullet Force Multiplayer</h3>
+                        <p>Shooter multijugador con gráficos intensos y pura adrenalina.</p>
+                        <span class="platform">📱💻</span>
+                        <button class="play-button" onclick="openGameModal('Bullet Force Multiplayer', 'game1')">
+                            <i class="fas fa-play"></i> Jugar
+                        </button>
+                    </article>
+                    <article class="game-card" data-category="action multiplayer">
+                        <img src="2.jpg" alt="Krunker.io">
+                        <h3>Krunker.io</h3>
+                        <p>Disparos rápidos en un FPS online que te engancha.</p>
+                        <span class="platform">📱💻</span>
+                        <button class="play-button" onclick="openGameModal('Krunker.io', 'game2')">
+                            <i class="fas fa-play"></i> Jugar
+                        </button>
+                    </article>
+                    <article class="game-card" data-category="action">
+                        <img src="12.jpg" alt="Subway Clash 3D">
+                        <h3>Subway Clash 3D</h3>
+                        <p>Batallas subterráneas llenas de acción y caos.</p>
+                        <span class="platform">💻</span>
+                        <button class="play-button" onclick="openGameModal('Subway Clash 3D', 'game12')">
+                            <i class="fas fa-play"></i> Jugar
+                        </button>
+                    </article>
+                    <article class="game-card" data-category="action">
+                        <img src="18.jpg" alt="Tank Trouble">
+                        <h3>Tank Trouble</h3>
+                        <p>Tanques en laberintos para batallas épicas.</p>
+                        <span class="platform">💻</span>
+                        <button class="play-button" onclick="openGameModal('Tank Trouble', 'game18')">
+                            <i class="fas fa-play"></i> Jugar
+                        </button>
+                    </article>
+                    <article class="game-card" data-category="action">
+                        <img src="19.jpg" alt="Gun Mayhem 2">
+                        <h3>Gun Mayhem 2</h3>
+                        <p>Duelos frenéticos con armas y saltos locos.</p>
+                        <span class="platform">💻</span>
+                        <button class="play-button" onclick="openGameModal('Gun Mayhem 2', 'game19')">
+                            <i class="fas fa-play"></i> Jugar
+                        </button>
+                    </article>
+                    <article class="game-card" data-category="action">
+                        <img src="20.jpg" alt="Getaway Shootout">
+                        <h3>Getaway Shootout</h3>
+                        <p>Carreras y tiroteos en un caos para dos jugadores.</p>
+                        <span class="platform">💻</span>
+                        <button class="play-button" onclick="openGameModal('Getaway Shootout', 'game20')">
+                            <i class="fas fa-play"></i> Jugar
+                        </button>
+                    </article>
+                    <article class="game-card" data-category="action">
+                        <img src="22.jpg" alt="Rooftop Snipers">
+                        <h3>Rooftop Snipers</h3>
+                        <p>Duelos en tejados con disparos precisos y tensión.</p>
+                        <span class="platform">💻</span>
+                        <button class="play-button" onclick="openGameModal('Rooftop Snipers', 'game22')">
+                            <i class="fas fa-play"></i> Jugar
+                        </button>
+                    </article>
+                    <article class="game-card" data-category="action multiplayer">
+                        <img src="shell-shockers.jpg" alt="Shell Shockers">
+                        <h3>Shell Shockers</h3>
+                        <p>Shooter de huevos multijugador.</p>
+                        <span class="platform">💻</span>
+                        <button class="play-button" onclick="openGameModal('Shell Shockers', 'https://shellshock.io/')">
+                            <i class="fas fa-play"></i> Jugar
+                        </button>
+                    </article>
+                    <article class="game-card" data-category="action multiplayer">
+                        <img src="venge-io.jpg" alt="Venge.io">
+                        <h3>Venge.io</h3>
+                        <p>Shooter futurista.</p>
+                        <span class="platform">💻</span>
+                        <button class="play-button" onclick="openGameModal('Venge.io', 'https://venge.io/')">
+                            <i class="fas fa-play"></i> Jugar
+                        </button>
+                    </article>
+                    <article class="game-card" data-category="action multiplayer">
+                        <img src="war-brokers.jpg" alt="War Brokers">
+                        <h3>War Brokers</h3>
+                        <p>Combate militar.</p>
+                        <span class="platform">💻</span>
+                        <button class="play-button" onclick="openGameModal('War Brokers', 'https://warbrokers.io/')">
+                            <i class="fas fa-play"></i> Jugar
+                        </button>
+                    </article>
+                    <article class="game-card" data-category="action">
+                        <img src="ninja-clash.jpg" alt="Ninja Clash Heroes">
+                        <h3>Ninja Clash Heroes</h3>
+                        <p>Ninjas vs enemigos.</p>
+                        <span class="platform">💻</span>
+                        <button class="play-button" onclick="openGameModal('Ninja Clash Heroes', 'https://www.crazygames.com/embed/ninja-clash-heroes')">
+                            <i class="fas fa-play"></i> Jugar
+                        </button>
+                    </article>
+                    <article class="game-card" data-category="action">
+                        <img src="time-shooter.jpg" alt="Time Shooter 2">
+                        <h3>Time Shooter 2</h3>
+                        <p>Shooter con tiempo lento.</p>
+                        <span class="platform">💻</span>
+                        <button class="play-button" onclick="openGameModal('Time Shooter 2', 'https://www.crazygames.com/embed/time-shooter-2')">
+                            <i class="fas fa-play"></i> Jugar
+                        </button>
+                    </article>
+                    <article class="game-card" data-category="action">
+                        <img src="pixel-warfare.jpg" alt="Pixel Warfare">
+                        <h3>Pixel Warfare</h3>
+                        <p>Shooter estilo Minecraft.</p>
+                        <span class="platform">💻</span>
+                        <button class="play-button" onclick="openGameModal('Pixel Warfare', 'https://www.crazygames.com/embed/pixel-warfare')">
+                            <i class="fas fa-play"></i> Jugar
+                        </button>
+                    </article>
+                    <article class="game-card" data-category="action multiplayer">
+                        <img src="1v1-lol.jpg" alt="1v1.LOL">
+                        <h3>1v1.LOL</h3>
+                        <p>Battle Royale de construcción.</p>
+                        <span class="platform">💻</span>
+                        <button class="play-button" onclick="openGameModal('1v1.LOL', 'https://1v1.lol/')">
+                            <i class="fas fa-play"></i> Jugar
+                        </button>
+                    </article>
+                    <article class="game-card" data-category="action multiplayer">
+                        <img src="zombs-royale.jpg" alt="Zombs Royale">
+                        <h3>Zombs Royale</h3>
+                        <p>Battle Royale 2D.</p>
+                        <span class="platform">💻</span>
+                        <button class="play-button" onclick="openGameModal('Zombs Royale', 'https://zombsroyale.io/')">
+                            <i class="fas fa-play"></i> Jugar
+                        </button>
+                    </article>
+                    <article class="game-card" data-category="action multiplayer">
+                        <img src="surviv-io.jpg" alt="Surviv.io">
+                        <h3>Surviv.io</h3>
+                        <p>Battle Royale vista superior.</p>
+                        <span class="platform">💻</span>
+                        <button class="play-button" onclick="openGameModal('Surviv.io', 'https://surviv.io/')">
+                            <i class="fas fa-play"></i> Jugar
+                        </button>
+                    </article>
+                </div>
+            </section>
 
-        <section class="category" data-category="sports">
-            <h2>Deportes</h2>
-            <div class="game-grid">
-                <article class="game-card" data-category="sports">
-                    <img src="7.jpg" alt="Penalty Shooters 2">
-                    <h3>Penalty Shooters 2</h3>
-                    <p>Tiros penales para probar tu puntería.</p>
-                    <span class="platform">📱💻</span>
-                    <button class="play-button" onclick="openGameModal('Penalty Shooters 2', 'game7')">
-                        <i class="fas fa-play"></i> Jugar
-                    </button>
-                </article>
-                <article class="game-card" data-category="sports">
-                    <img src="8.jpg" alt="Table Tennis World Tour">
-                    <h3>Table Tennis World Tour</h3>
-                    <p>Tenis de mesa con rivales globales.</p>
-                    <span class="platform">📱💻</span>
-                    <button class="play-button" onclick="openGameModal('Table Tennis World Tour', 'game8')">
-                        <i class="fas fa-play"></i> Jugar
-                    </button>
-                </article>
-                <article class="game-card" data-category="sports">
-                    <img src="9.png" alt="8 Ball Billiards Classic">
-                    <h3>8 Ball Billiards Classic</h3>
-                    <p>Pool clásico para amantes del billar.</p>
-                    <span class="platform">📱💻</span>
-                    <button class="play-button" onclick="openGameModal('8 Ball Billiards Classic', 'game9')">
-                        <i class="fas fa-play"></i> Jugar
-                    </button>
-                </article>
-                <article class="game-card" data-category="sports">
-                    <img src="23.jpg" alt="Basket Random">
-                    <h3>Basket Random</h3>
-                    <p>Básquet caótico con física divertida.</p>
-                    <span class="platform">📱💻</span>
-                    <button class="play-button" onclick="openGameModal('Basket Random', 'game23')">
-                        <i class="fas fa-play"></i> Jugar
-                    </button>
-                </article>
-            </div>
-        </section>
+            <section id="carreras" class="category">
+                <div class="section-header">
+                    <h2>Carreras</h2>
+                </div>
+                <div class="game-grid">
+                    <article class="game-card" data-category="racing">
+                        <img src="3.jpg" alt="Rally Point 3">
+                        <h3>Rally Point 3</h3>
+                        <p>Carreras rally con autos potentes y pistas extremas.</p>
+                        <span class="platform">💻</span>
+                        <button class="play-button" onclick="openGameModal('Rally Point 3', 'game3')">
+                            <i class="fas fa-play"></i> Jugar
+                        </button>
+                    </article>
+                    <article class="game-card" data-category="racing">
+                        <img src="4.jpg" alt="Mad Truck Challenge">
+                        <h3>Mad Truck Challenge</h3>
+                        <p>Camionetas monstruo en competencias salvajes.</p>
+                        <span class="platform">💻</span>
+                        <button class="play-button" onclick="openGameModal('Mad Truck Challenge', 'game4')">
+                            <i class="fas fa-play"></i> Jugar
+                        </button>
+                    </article>
+                    <article class="game-card" data-category="racing">
+                        <img src="5.png" alt="Drift Hunters">
+                        <h3>Drift Hunters</h3>
+                        <p>Drifteá autos realistas en circuitos abiertos.</p>
+                        <span class="platform">💻</span>
+                        <button class="play-button" onclick="openGameModal('Drift Hunters', 'game5')">
+                            <i class="fas fa-play"></i> Jugar
+                        </button>
+                    </article>
+                    <article class="game-card" data-category="racing">
+                        <img src="6.png" alt="Super Bike The Champion">
+                        <h3>Super Bike The Champion</h3>
+                        <p>Carreras de motos con velocidad y curvas locas.</p>
+                        <span class="platform">💻</span>
+                        <button class="play-button" onclick="openGameModal('Super Bike The Champion', 'game6')">
+                            <i class="fas fa-play"></i> Jugar
+                        </button>
+                    </article>
+                    <article class="game-card" data-category="racing multiplayer">
+                        <img src="15.jpg" alt="Smash Karts">
+                        <h3>Smash Karts</h3>
+                        <p>Karts con armas para peleas explosivas y divertidas.</p>
+                        <span class="platform">📱💻</span>
+                        <button class="play-button" onclick="openGameModal('Smash Karts', 'game15')">
+                            <i class="fas fa-play"></i> Jugar
+                        </button>
+                    </article>
+                    <article class="game-card" data-category="racing">
+                        <img src="17.png" alt="Super Star Car">
+                        <h3>Super Star Car</h3>
+                        <p>Compite como piloto estrella en carreras pro.</p>
+                        <span class="platform">💻</span>
+                        <button class="play-button" onclick="openGameModal('Super Star Car', 'game17')">
+                            <i class="fas fa-play"></i> Jugar
+                        </button>
+                    </article>
+                    <article class="game-card" data-category="racing">
+                        <img src="21.jpg" alt="City Car Driving Simulator">
+                        <h3>City Car Driving Simulator</h3>
+                        <p>Conducí por la ciudad con autos realistas.</p>
+                        <span class="platform">💻</span>
+                        <button class="play-button" onclick="openGameModal('City Car Driving Simulator', 'game21')">
+                            <i class="fas fa-play"></i> Jugar
+                        </button>
+                    </article>
+                </div>
+            </section>
 
-        <section class="category" data-category="puzzles">
-            <h2>Puzles</h2>
-            <div class="game-grid">
-                <article class="game-card" data-category="puzzles">
-                    <img src="11.png" alt="2048">
-                    <h3>2048</h3>
-                    <p>Combina números en este puzzle desafiante.</p>
-                    <span class="platform">📱💻</span>
-                    <button class="play-button" onclick="openGameModal('2048', 'game11')">
-                        <i class="fas fa-play"></i> Jugar
-                    </button>
-                </article>
-            </div>
-        </section>
+            <section id="deportes" class="category">
+                <div class="section-header">
+                    <h2>Deportes</h2>
+                </div>
+                <div class="game-grid">
+                    <article class="game-card" data-category="sports">
+                        <img src="7.jpg" alt="Penalty Shooters 2">
+                        <h3>Penalty Shooters 2</h3>
+                        <p>Tiros penales para probar tu puntería.</p>
+                        <span class="platform">📱💻</span>
+                        <button class="play-button" onclick="openGameModal('Penalty Shooters 2', 'game7')">
+                            <i class="fas fa-play"></i> Jugar
+                        </button>
+                    </article>
+                    <article class="game-card" data-category="sports">
+                        <img src="8.jpg" alt="Table Tennis World Tour">
+                        <h3>Table Tennis World Tour</h3>
+                        <p>Tenis de mesa con rivales globales.</p>
+                        <span class="platform">📱💻</span>
+                        <button class="play-button" onclick="openGameModal('Table Tennis World Tour', 'game8')">
+                            <i class="fas fa-play"></i> Jugar
+                        </button>
+                    </article>
+                    <article class="game-card" data-category="sports">
+                        <img src="9.png" alt="8 Ball Billiards Classic">
+                        <h3>8 Ball Billiards Classic</h3>
+                        <p>Pool clásico para amantes del billar.</p>
+                        <span class="platform">📱💻</span>
+                        <button class="play-button" onclick="openGameModal('8 Ball Billiards Classic', 'game9')">
+                            <i class="fas fa-play"></i> Jugar
+                        </button>
+                    </article>
+                    <article class="game-card" data-category="sports">
+                        <img src="23.jpg" alt="Basket Random">
+                        <h3>Basket Random</h3>
+                        <p>Básquet caótico con física divertida.</p>
+                        <span class="platform">📱💻</span>
+                        <button class="play-button" onclick="openGameModal('Basket Random', 'game23')">
+                            <i class="fas fa-play"></i> Jugar
+                        </button>
+                    </article>
+                    <article class="game-card" data-category="sports">
+                        <img src="table-tennis.jpg" alt="Table Tennis">
+                        <h3>Table Tennis</h3>
+                        <p>Ping pong mundial.</p>
+                        <span class="platform">💻</span>
+                        <button class="play-button" onclick="openGameModal('Table Tennis', 'https://www.crazygames.com/embed/table-tennis-world-cup')">
+                            <i class="fas fa-play"></i> Jugar
+                        </button>
+                    </article>
+                </div>
+            </section>
 
-        <section class="category" data-category="multiplayer">
-            <h2>Multijugador</h2>
-            <div class="game-grid">
-                <article class="game-card" data-category="action multiplayer">
-                    <img src="1.jpg" alt="Bullet Force Multiplayer">
-                    <h3>Bullet Force Multiplayer</h3>
-                    <p>Shooter multijugador con gráficos intensos y pura adrenalina.</p>
-                    <span class="platform">📱💻</span>
-                    <button class="play-button" onclick="openGameModal('Bullet Force Multiplayer', 'game1')">
-                        <i class="fas fa-play"></i> Jugar
-                    </button>
-                </article>
-                <article class="game-card" data-category="action multiplayer">
-                    <img src="2.jpg" alt="Krunker.io">
-                    <h3>Krunker.io</h3>
-                    <p>Disparos rápidos en un FPS online que te engancha.</p>
-                    <span class="platform">📱💻</span>
-                    <button class="play-button" onclick="openGameModal('Krunker.io', 'game2')">
-                        <i class="fas fa-play"></i> Jugar
-                    </button>
-                </article>
-                <article class="game-card" data-category="multiplayer">
-                    <img src="10.jpg" alt="Paper.io 2">
-                    <h3>Paper.io 2</h3>
-                    <p>Conquistá territorio con táctica y cuidado.</p>
-                    <span class="platform">📱💻</span>
-                    <button class="play-button" onclick="openGameModal('Paper.io 2', 'game10')">
-                        <i class="fas fa-play"></i> Jugar
-                    </button>
-                </article>
-                <article class="game-card" data-category="racing multiplayer">
-                    <img src="15.jpg" alt="Smash Karts">
-                    <h3>Smash Karts</h3>
-                    <p>Karts con armas para peleas explosivas y divertidas.</p>
-                    <span class="platform">📱💻</span>
-                    <button class="play-button" onclick="openGameModal('Smash Karts', 'game15')">
-                        <i class="fas fa-play"></i> Jugar
-                    </button>
-                </article>
-                <article class="game-card" data-category="multiplayer">
-                    <img src="16.jpg" alt="Worms Zone">
-                    <h3>Worms Zone</h3>
-                    <p>Come y crecé en esta aventura de gusanos.</p>
-                    <span class="platform">📱💻</span>
-                    <button class="play-button" onclick="openGameModal('Worms Zone', 'game16')">
-                        <i class="fas fa-play"></i> Jugar
-                    </button>
-                </article>
-                <article class="game-card" data-category="multiplayer">
-                    <img src="24.jpg" alt="Slither.io">
-                    <h3>Slither.io</h3>
-                    <p>Crece tu serpiente esquivando rivales.</p>
-                    <span class="platform">📱💻</span>
-                    <button class="play-button" onclick="openGameModal('Slither.io', 'game24')">
-                        <i class="fas fa-play"></i> Jugar
-                    </button>
-                </article>
-                <article class="game-card" data-category="multiplayer">
-                    <img src="25.png" alt="Diep.io">
-                    <h3>Diep.io</h3>
-                    <p>Mejorá tu tanque y dominá el campo.</p>
-                    <span class="platform">📱💻</span>
-                    <button class="play-button" onclick="openGameModal('Diep.io', 'game25')">
-                        <i class="fas fa-play"></i> Jugar
-                    </button>
-                </article>
-                <article class="game-card" data-category="multiplayer">
-                    <img src="26.jpeg" alt="Happy Wheels">
-                    <h3>Happy Wheels</h3>
-                    <p>Aventura loca con obstáculos mortales.</p>
-                    <span class="platform">💻</span>
-                    <button class="play-button" onclick="openGameModal('Happy Wheels', 'game26')">
-                        <i class="fas fa-play"></i> Jugar
-                    </button>
-                </article>
-                <article class="game-card" data-category="multiplayer">
-                    <img src="27.jpg" alt="Skribbl.io">
-                    <h3>Skribbl.io</h3>
-                    <p>Dibujá y adiviná palabras con amigos online.</p>
-                    <span class="platform">📱💻</span>
-                    <button class="play-button" onclick="openGameModal('Skribbl.io', 'game27')">
-                        <i class="fas fa-play"></i> Jugar
-                    </button>
-                </article>
-                <article class="game-card" data-category="multiplayer">
-                    <img src="28.jpg" alt="Subway Surfers">
-                    <h3>Subway Surfers</h3>
-                    <p>Corré y esquivá trenes en esta aventura sin fin.</p>
-                    <span class="platform">📱💻</span>
-                    <button class="play-button" onclick="openGameModal('Subway Surfers', 'game28')">
-                        <i class="fas fa-play"></i> Jugar
-                    </button>
-                </article>
-            </div>
-        </section>
-    </main>
+            <section id="puzzles" class="category">
+                <div class="section-header">
+                    <h2>Puzles</h2>
+                </div>
+                <div class="game-grid">
+                    <article class="game-card" data-category="puzzles">
+                        <img src="11.png" alt="2048">
+                        <h3>2048</h3>
+                        <p>Combina números en este puzzle desafiante.</p>
+                        <span class="platform">📱💻</span>
+                        <button class="play-button" onclick="openGameModal('2048', 'game11')">
+                            <i class="fas fa-play"></i> Jugar
+                        </button>
+                    </article>
+                    <article class="game-card" data-category="puzzles">
+                        <img src="words-of-wonders.jpg" alt="Words of Wonders">
+                        <h3>Words of Wonders</h3>
+                        <p>Palabras cruzadas.</p>
+                        <span class="platform">💻</span>
+                        <button class="play-button" onclick="openGameModal('Words of Wonders', 'https://www.crazygames.com/embed/words-of-wonders')">
+                            <i class="fas fa-play"></i> Jugar
+                        </button>
+                    </article>
+                </div>
+            </section>
 
-    <div class="game-modal" id="gameModal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2 id="modalGameTitle">Título del Juego</h2>
-                <button class="close-modal" onclick="closeGameModal()">
-                    <i class="fas fa-times"></i>
-                </button>
-            </div>
-            <iframe id="gameIframe" class="game-iframe" allowfullscreen></iframe>
-        </div>
+            <section id="multiplayer" class="category">
+                <div class="section-header">
+                    <h2>Multijugador</h2>
+                </div>
+                <div class="game-grid">
+                    <article class="game-card" data-category="action multiplayer">
+                        <img src="1.jpg" alt="Bullet Force Multiplayer">
+                        <h3>Bullet Force Multiplayer</h3>
+                        <p>Shooter multijugador con gráficos intensos y pura adrenalina.</p>
+                        <span class="platform">📱💻</span>
+                        <button class="play-button" onclick="openGameModal('Bullet Force Multiplayer', 'game1')">
+                            <i class="fas fa-play"></i> Jugar
+                        </button>
+                    </article>
+                    <article class="game-card" data-category="action multiplayer">
+                        <img src="2.jpg" alt="Krunker.io">
+                        <h3>Krunker.io</h3>
+                        <p>Disparos rápidos en un FPS online que te engancha.</p>
+                        <span class="platform">📱💻</span>
+                        <button class="play-button" onclick="openGameModal('Krunker.io', 'game2')">
+                            <i class="fas fa-play"></i> Jugar
+                        </button>
+                    </article>
+                    <article class="game-card" data-category="multiplayer">
+                        <img src="10.jpg" alt="Paper.io 2">
+                        <h3>Paper.io 2</h3>
+                        <p>Conquistá territorio con táctica y cuidado.</p>
+                        <span class="platform">📱💻</span>
+                        <button class="play-button" onclick="openGameModal('Paper.io 2', 'game10')">
+                            <i class="fas fa-play"></i> Jugar
+                        </button>
+                    </article>
+                    <article class="game-card" data-category="racing multiplayer">
+                        <img src="15.jpg" alt="Smash Karts">
+                        <h3>Smash Karts</h3>
+                        <p>Karts con armas para peleas explosivas y divertidas.</p>
+                        <span class="platform">📱💻</span>
+                        <button class="play-button" onclick="openGameModal('Smash Karts', 'game15')">
+                            <i class="fas fa-play"></i> Jugar
+                        </button>
+                    </article>
+                    <article class="game-card" data-category="multiplayer">
+                        <img src="16.jpg" alt="Worms Zone">
+                        <h3>Worms Zone</h3>
+                        <p>Come y crecé en esta aventura de gusanos.</p>
+                        <span class="platform">📱💻</span>
+                        <button class="play-button" onclick="openGameModal('Worms Zone', 'game16')">
+                            <i class="fas fa-play"></i> Jugar
+                        </button>
+                    </article>
+                    <article class="game-card" data-category="multiplayer">
+                        <img src="24.jpg" alt="Slither.io">
+                        <h3>Slither.io</h3>
+                        <p>Crece tu serpiente esquivando rivales.</p>
+                        <span class="platform">📱💻</span>
+                        <button class="play-button" onclick="openGameModal('Slither.io', 'game24')">
+                            <i class="fas fa-play"></i> Jugar
+                        </button>
+                    </article>
+                    <article class="game-card" data-category="multiplayer">
+                        <img src="25.png" alt="Diep.io">
+                        <h3>Diep.io</h3>
+                        <p>Mejorá tu tanque y dominá el campo.</p>
+                        <span class="platform">📱💻</span>
+                        <button class="play-button" onclick="openGameModal('Diep.io', 'game25')">
+                            <i class="fas fa-play"></i> Jugar
+                        </button>
+                    </article>
+                    <article class="game-card" data-category="multiplayer">
+                        <img src="26.jpeg" alt="Happy Wheels">
+                        <h3>Happy Wheels</h3>
+                        <p>Aventura loca con obstáculos mortales.</p>
+                        <span class="platform">💻</span>
+                        <button class="play-button" onclick="openGameModal('Happy Wheels', 'game26')">
+                            <i class="fas fa-play"></i> Jugar
+                        </button>
+                    </article>
+                    <article class="game-card" data-category="multiplayer">
+                        <img src="27.jpg" alt="Skribbl.io">
+                        <h3>Skribbl.io</h3>
+                        <p>Dibujá y adiviná palabras con amigos online.</p>
+                        <span class="platform">📱💻</span>
+                        <button class="play-button" onclick="openGameModal('Skribbl.io', 'game27')">
+                            <i class="fas fa-play"></i> Jugar
+                        </button>
+                    </article>
+                    <article class="game-card" data-category="multiplayer">
+                        <img src="28.jpg" alt="Subway Surfers">
+                        <h3>Subway Surfers</h3>
+                        <p>Corré y esquivá trenes en esta aventura sin fin.</p>
+                        <span class="platform">📱💻</span>
+                        <button class="play-button" onclick="openGameModal('Subway Surfers', 'game28')">
+                            <i class="fas fa-play"></i> Jugar
+                        </button>
+                    </article>
+                    <article class="game-card" data-category="multiplayer">
+                        <img src="kirka-io.jpg" alt="Kirka.io">
+                        <h3>Kirka.io</h3>
+                        <p>FPS voxelado.</p>
+                        <span class="platform">💻</span>
+                        <button class="play-button" onclick="openGameModal('Kirka.io', 'https://kirka.io/')">
+                            <i class="fas fa-play"></i> Jugar
+                        </button>
+                    </article>
+                </div>
+            </section>
+        </main>
     </div>
 
-    <footer>
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-logo">
+                <img src="neon-gamer-logo.jpg" alt="Neon Gamer Logo" class="neon-logo">
+            </div>
+        </div>
         <div class="footer-content">
-            <p>© 2025 MinijuegoLivan.org</p>
-            <nav class="footer-links">
-                <a href="privacy.html">Política de Privacidad</a>
-                <a href="terms.html">Términos</a>
-                <a href="contact.html">Contacto</a>
-                <a href="reviews.html">Reseñas</a>
-            </nav>
-            <div class="share-buttons">
-                <a href="https://wa.me/+18095029777?text=¡Chequeá mi sitio MinijuegoLivan.org! Juegos gratis online zarpados: https://www.minijuegolivan.org/" target="_blank" class="share-btn whatsapp"><i class="fab fa-whatsapp"></i></a>
-                <a href="https://www.instagram.com/andreslivan/" target="_blank" class="share-btn instagram"><i class="fab fa-instagram"></i></a>
+            <div class="footer-section">
+                <h3>Navegación</h3>
+                <ul class="footer-nav">
+                    <li><a href="index.html"><i class="fas fa-home"></i>Inicio</a></li>
+                    <li><a href="#populares"><i class="fas fa-star"></i>Populares</a></li>
+                    <li><a href="#nuevos"><i class="fas fa-clock"></i>Nuevos</a></li>
+                    <li><a href="#cuenta"><i class="fas fa-user"></i>Mi Cuenta</a></li>
+                </ul>
+                <div class="footer-featured">
+                    <h4>Juegos Destacados</h4>
+                    <div class="featured-games">
+                        <a href="#" class="featured-game">
+                            <img src="1.jpg" alt="Bullet Force">
+                            <span>Bullet Force</span>
+                        </a>
+                        <a href="#" class="featured-game">
+                            <img src="venge-io.jpg" alt="Venge.io">
+                            <span>Venge.io</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Categorías</h3>
+                <ul class="footer-categories">
+                    <li><a href="#accion"><i class="fas fa-fire"></i>Juegos de Acción</a></li>
+                    <li><a href="#carreras"><i class="fas fa-car"></i>Juegos de Carreras</a></li>
+                    <li><a href="#deportes"><i class="fas fa-futbol"></i>Juegos de Deportes</a></li>
+                    <li><a href="#multiplayer"><i class="fas fa-users"></i>Multijugador</a></li>
+                </ul>
+                <div class="ad-space">
+                    <span>Espacio Publicitario</span>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Comunidad</h3>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/share/1C9SVZUs19/" class="social-link" target="_blank" title="Sígueme en Facebook">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="https://www.instagram.com/minijuegolivan" class="social-link" target="_blank" title="Sígueme en Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-link" target="_blank" title="Únete a Discord">
+                        <i class="fab fa-discord"></i>
+                    </a>
+                </div>
+                <div class="newsletter">
+                    <h4>¡Recibe Nuevos Juegos!</h4>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Tu correo electrónico">
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <h4>Contacto</h4>
+                    <p><i class="fas fa-envelope"></i>andreslivancon@gmail.com</p>
+                    <a href="contact.html" class="contact-link">Contáctanos</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-bottom-content">
+                <div class="footer-links">
+                    <a href="privacy.html">Política de Privacidad</a>
+                    <a href="terms.html">Términos y Condiciones</a>
+                    <a href="reviews.html">Reseñas</a>
+                    <a href="#advertise">Publicidad</a>
+                </div>
+                <p class="copyright">&copy; 2025 MinijuegoLivan - La mejor colección de juegos online</p>
             </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <div class="game-modal" id="gameModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="gameTitle"></h2>
+                <button class="close-modal" onclick="closeGameModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <iframe id="gameFrame" class="game-frame" src="" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <script>
+        // Función para abrir el modal del juego
+        function openGameModal(title, gameId) {
+            document.getElementById('gameTitle').textContent = title;
+            document.getElementById('gameFrame').src = gameId;
+            document.getElementById('gameModal').style.display = 'block';
+        }
+
+        // Función para cerrar el modal
+        function closeGameModal() {
+            document.getElementById('gameFrame').src = '';
+            document.getElementById('gameModal').style.display = 'none';
+        }
+
+        // Búsqueda de juegos
+        document.querySelector('.search-box').addEventListener('keyup', function(e) {
+            const searchValue = e.target.value.toLowerCase();
+            const gameCards = document.querySelectorAll('.game-card');
+            
+            gameCards.forEach(card => {
+                const title = card.querySelector('h3').textContent.toLowerCase();
+                const description = card.querySelector('p').textContent.toLowerCase();
+                card.style.display = 
+                    title.includes(searchValue) || description.includes(searchValue) 
+                    ? 'block' 
+                    : 'none';
+            });
+        });
+
+        // Navegación suave a las secciones
+        document.querySelectorAll('.category-list a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const section = document.querySelector(this.getAttribute('href'));
+                section.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
 </body>
 </html>
