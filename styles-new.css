@@ -743,22 +743,29 @@ header {
     }
 }
 
-/* Footer Logo */
+/* Footer Top */
 .footer-top {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 1rem 2rem;
     position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+/* Footer Logo */
 .footer-logo {
-    position: absolute;
-    top: -30px;
-    left: 2rem;
+    position: relative;
+    padding: 0.5rem;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    margin-bottom: 1rem;
 }
 
 .neon-logo {
-    max-width: 100px;
+    max-width: 80px;
     height: auto;
     filter: drop-shadow(0 0 8px var(--primary-neon));
     transition: all 0.3s;
@@ -771,12 +778,10 @@ header {
 
 @media (max-width: 768px) {
     .footer-logo {
-        position: static;
-        text-align: center;
-        margin-bottom: 2rem;
+        margin: 0 auto 1rem;
     }
 
     .neon-logo {
-        max-width: 80px;
+        max-width: 60px;
     }
 }
