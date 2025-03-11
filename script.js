@@ -33,7 +33,7 @@ function openGameModal(title, gameId) {
     };
 
     modalTitle.textContent = title;
-    iframe.src = gameUrls[gameId];
+    iframe.src = gameUrls[gameId] || gameId; 
     modal.style.display = 'flex';
 }
 
