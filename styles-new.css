@@ -6,6 +6,7 @@
     --bg-dark: #1A1A1A;
     --text-light: #FFFFFF;
     --card-radius: 15px;
+    --animation-reduced: var(--prefers-reduced-motion, none) !important;
 }
 
 * {
@@ -31,6 +32,9 @@ body {
     border-bottom: 2px solid var(--primary-neon);
     position: relative;
     overflow: hidden;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000px;
 }
 
 .header::after {
@@ -41,8 +45,8 @@ body {
     right: 0;
     height: 2px;
     background: linear-gradient(90deg, transparent, var(--primary-neon), transparent);
-    box-shadow: 0 0 25px var(--primary-neon);
-    animation: neonFlow 3s linear infinite;
+    box-shadow: 0 0 15px var(--primary-neon);
+    animation: neonFlow 3s linear infinite var(--animation-reduced);
 }
 
 .header-content {
@@ -57,18 +61,64 @@ body {
 
 .header-logo {
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-logo::before,
+.header-logo::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 100px;
+    height: 2px;
+    background: var(--primary-neon);
+    transform: translateY(-50%);
+    box-shadow: 0 0 10px var(--primary-neon), 0 0 20px var(--primary-neon);
+}
+
+.header-logo::before {
+    right: 100%;
+    margin-right: 20px;
+}
+
+.header-logo::after {
+    left: 100%;
+    margin-left: 20px;
 }
 
 .header-logo-img {
-    max-width: 150px;
+    max-width: 200px;
     height: auto;
-    filter: drop-shadow(0 0 12px var(--primary-neon));
+    filter: drop-shadow(0 0 10px var(--primary-neon));
     transition: all 0.3s;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+    animation: neonPulse 2s infinite var(--animation-reduced);
 }
 
 .header-logo-img:hover {
     transform: scale(1.05);
     filter: drop-shadow(0 0 20px var(--primary-neon)) brightness(1.2);
+}
+
+@keyframes neonPulse {
+    0% { filter: drop-shadow(0 0 10px var(--primary-neon)); }
+    50% { filter: drop-shadow(0 0 15px var(--primary-neon)) brightness(1.1); }
+    100% { filter: drop-shadow(0 0 10px var(--primary-neon)); }
+}
+
+@media (max-width: 768px) {
+    .header-logo-img {
+        max-width: 150px;
+    }
+
+    .header-logo::before,
+    .header-logo::after {
+        width: 50px;
+    }
 }
 
 .header-welcome {
@@ -83,7 +133,7 @@ body {
     letter-spacing: 3px;
     margin-bottom: 0.5rem;
     text-shadow: 0 0 15px var(--primary-neon);
-    animation: titlePulse 2s infinite;
+    animation: titlePulse 3s infinite var(--animation-reduced);
 }
 
 @keyframes titlePulse {
@@ -121,7 +171,7 @@ body {
     color: #fff;
     font-size: 1rem;
     text-transform: uppercase;
-    transition: all 0.3s;
+    transition: transform 0.2s, color 0.2s, filter 0.2s;
 }
 
 .search-input::placeholder {
@@ -133,7 +183,7 @@ body {
 .search-input:focus {
     outline: none;
     border-color: var(--primary-neon);
-    box-shadow: 0 0 15px var(--primary-neon);
+    box-shadow: 0 0 10px var(--primary-neon);
 }
 
 .search-button {
@@ -144,7 +194,10 @@ body {
     color: var(--primary-neon);
     font-size: 1.2rem;
     cursor: pointer;
-    transition: all 0.3s;
+    transition: transform 0.2s, color 0.2s, filter 0.2s;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000px;
 }
 
 .search-button:hover {
@@ -172,6 +225,10 @@ body {
 
     .welcome-text {
         font-size: 1rem;
+    }
+
+    .search-container {
+        max-width: 100%;
     }
 }
 
@@ -237,7 +294,7 @@ body {
     align-items: center;
     padding: 0.8rem;
     border-radius: var(--card-radius);
-    transition: all 0.3s;
+    transition: transform 0.2s, color 0.2s, filter 0.2s;
     margin-bottom: 0.5rem;
 }
 
@@ -265,7 +322,7 @@ body {
     background: rgba(0, 0, 0, 0.5);
     color: var(--text-light);
     outline: none;
-    transition: all 0.3s;
+    transition: transform 0.2s, color 0.2s, filter 0.2s;
 }
 
 .search-box:focus {
@@ -287,7 +344,7 @@ body {
     padding: 1rem;
     text-align: center;
     border: 1px solid var(--dark-neon);
-    transition: all 0.3s;
+    transition: transform 0.2s, color 0.2s, filter 0.2s;
 }
 
 .game-card:hover {
@@ -332,7 +389,7 @@ body {
     border-radius: 25px;
     cursor: pointer;
     font-weight: bold;
-    transition: all 0.3s;
+    transition: transform 0.2s, color 0.2s, filter 0.2s;
     text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
@@ -428,6 +485,9 @@ body {
     margin-top: 4rem;
     position: relative;
     overflow: hidden;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000px;
 }
 
 .footer::before {
@@ -438,8 +498,8 @@ body {
     right: 0;
     height: 2px;
     background: linear-gradient(90deg, transparent, var(--primary-neon), transparent);
-    box-shadow: 0 0 25px var(--primary-neon);
-    animation: neonFlow 3s linear infinite;
+    box-shadow: 0 0 15px var(--primary-neon);
+    animation: neonFlow 3s linear infinite var(--animation-reduced);
 }
 
 @keyframes neonFlow {
@@ -473,7 +533,7 @@ body {
     font-size: 1.1rem;
     display: flex;
     align-items: center;
-    transition: all 0.3s;
+    transition: transform 0.2s, color 0.2s, filter 0.2s;
     opacity: 0.8;
 }
 
@@ -522,7 +582,7 @@ body {
     text-decoration: none;
     color: var(--text-light);
     text-align: center;
-    transition: all 0.3s;
+    transition: transform 0.2s, color 0.2s, filter 0.2s;
 }
 
 .featured-game img {
@@ -569,7 +629,7 @@ body {
     font-size: 1rem;
     display: flex;
     align-items: center;
-    transition: all 0.3s;
+    transition: transform 0.2s, color 0.2s, filter 0.2s;
     opacity: 0.8;
 }
 
@@ -624,6 +684,9 @@ body {
     border: 2px solid var(--dark-neon);
     position: relative;
     overflow: hidden;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000px;
 }
 
 .social-link::before {
@@ -905,13 +968,16 @@ body {
 .neon-logo {
     max-width: 150px;
     height: auto;
-    filter: drop-shadow(0 0 12px var(--primary-neon));
+    filter: drop-shadow(0 0 8px var(--primary-neon));
     transition: all 0.3s;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000px;
 }
 
 .neon-logo:hover {
     transform: scale(1.05);
-    filter: drop-shadow(0 0 20px var(--primary-neon)) brightness(1.2);
+    filter: drop-shadow(0 0 12px var(--primary-neon)) brightness(1.2);
 }
 
 /* Footer Sections */
