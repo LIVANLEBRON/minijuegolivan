@@ -1,0 +1,5 @@
+# System and temporary files
+desktop.ini
+.DS_Store
+__pycache__/
+*.py[cod]
